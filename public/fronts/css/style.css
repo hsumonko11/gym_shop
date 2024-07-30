@@ -1,0 +1,38 @@
+.card-shadow{
+    box-shadow: 5px 5px 3px #c0c6c6 !important;
+
+}
+
+
+.lheight{
+    line-height: 30px;
+    text-align: justify;
+}
+
+.shop-photo:hover{
+    filter: contrast(1.75);
+}
+
+.home-product{
+    background-color: #f2f3f1;
+}
+
+.home-product:hover{
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px #c0c6c6;
+}
+
+.marq-ani{
+    color: red;
+    font-size: 3rem;
+    animation-name: marquee;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes marquee {
+    0%   {color: red;}
+    25%  {color: orange;}
+    50%  {color: blue;}
+    100% {color: green;}
+}

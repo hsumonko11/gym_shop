@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\RedirectResponse;
+use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Validation\Rules\Password;
 
 class PasswordController extends Controller
@@ -25,5 +26,20 @@ class PasswordController extends Controller
         ]);
 
         return back()->with('status', 'password-updated');
+    }
+
+    public function forgetPassword(Request $request){
+        $email = $request->email;
+        $password = $request->password;
+        $user = User::where('email',$email)->first();
+        $user->email = $email;
+        $user->password = Hash::make($password);
+        $user->save();
+        if($user->role == "Customer"){
+            return redirect()->route('customer_login_page')->with('status','Password Change successfully.');
+        }else{
+            return redirect()->route('login')->with('status','Password Change successfully.');
+        }
+
     }
 }

@@ -78,12 +78,16 @@
                 $('#result').text(bmi.toFixed(2));
 
                 if(bmi < 18.5){
+                    $('#normal').text("");
                     $('#underweight').text("You are underweight.");
                 }else if(bmi >= 18.5 && bmi < 24.9){
+                    $('#underweight').text("");
                     $('#normal').text("You are normal.");
                 }else if(bmi >= 25 && bmi < 29.9){
+                    $('#normal').text("");
                     $('#underweight').text("You are overweight.");
                 }else{
+                    $('#normal').text("");
                     $('#underweight').text("You are obese.");
                 }
 

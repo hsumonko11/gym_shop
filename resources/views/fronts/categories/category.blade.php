@@ -1,6 +1,6 @@
 @extends('fronts.layouts.main')
 
-@section('shop-active','active-menu')
+@section('category-active','active-menu')
 
 @section('content')
 <div class="bg0 m-t-80 p-b-140">
@@ -9,43 +9,21 @@
             <div class="flex-w flex-l-m filter-tope-group m-tb-10">
 
 
-                <a href="{{route('shop')}}">
                     <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1 mt-5" data-filter="*">
-                        All Products
+                       Categories
                     </button>
-                </a>
 
 
-                {{-- <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".men">
-                    Men
-                </button>
-
-                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".bag">
-                    Bag
-                </button>
-
-                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".shoes">
-                    Shoes
-                </button>
-
-                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".watches">
-                    Watches
-                </button> --}}
             </div>
 
             <div class="flex-w flex-c-m m-tb-10">
 
-                <form action="{{route('shop')}}" method="GET">
+                <form action="{{route('category')}}" method="GET">
                     @csrf
 
                     <label for="">Search Category</label>
                     <div class="input-group mb-3">
-                        <select name="category_id" id="category_id" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" style="width:200px;">
-                            <option value="all">All</option>
-                            @foreach ($categories as $category)
-                                <option value="{{$category->id}}" @if($category->id == request()->search) selected @endif>{{$category->name}}</option>
-                            @endforeach
-                        </select>
+                        <input type="text" name="search" class="form-control" placeholder="Search Category Name..." value="{{request()->search}}">
 
                         <div class="input-group-append">
                           <button type="submit" class="btn btn-md btn-success input-group-text" id="basic-addon2">Search</button>
@@ -53,16 +31,6 @@
                     </div>
                 </form>
 
-
-
-
-                {{-- @include('admins.layouts.flash_message') --}}
-
-                {{-- <div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
-                    <i class="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search"></i>
-                    <i class="icon-close-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-                    Search
-                </div> --}}
             </div>
 
             <!-- Search product -->
@@ -267,40 +235,24 @@
         </div>
 
         <div class="row isotope-grid">
-            @foreach($products as $product)
+            @foreach($categories as $category)
             <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
 
-
+            <a href="{{route('shop_category',$category->id)}}">
                 <div class="card card-shadow">
                     <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0 text-center shop-photo">
-                            <img src="{{asset('storage/products/'.$product->image)}}" alt="IMG-PRODUCT" style="width: 200px;height:200px;margin:10px;">
 
-                            {{-- <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a> --}}
+                        <div class="card-header text-center ">
+                            {{$category->name}}
                         </div>
 
-                        <div class="card-footer block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    {{$product->name}}
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    {{$product->price}} MMK
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="{{route('shop_detail',$product->id)}}">
-                                    <button type="button" class="btn btn-sm btn-primary">အသေးစိတ်</button>
-                                </a>
-                            </div>
+                        <div class="card-body block2-txt flex-w flex-t p-t-14">
+                            {{$category->description}}
                         </div>
-                    </div>
+
                 </div>
+            </a>
+
             </div>
             @endforeach
 
@@ -309,7 +261,7 @@
 
         <!-- Load more -->
         <div class="flex-c-m flex-w w-full p-t-45">
-            {{$products->links()}}
+            {{$categories->links()}}
         </div>
 
 

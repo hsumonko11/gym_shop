@@ -64,6 +64,8 @@ Route::put('/insert_payment_screenshot/{id}',[HomeController::class,'insertPayme
 
 Route::put('/change_user_profile/{id}',[ProfileController::class,'changeUserProfile'])->name('change_user_profile');
 
+Route::get('/categories',[HomeController::class,'category'])->name('category');
+
 
 Route::middleware('admin_auth')->prefix('admin')->name('admin.')->group(function(){
     Route::get('/contact',[DashboardController::class,'contactUs'])->name('contact');

@@ -74,7 +74,7 @@
 
                         <p class="d-inline">Voucher No : </p><span class="text-primary mb-2"><b>{{$order->voucher_no}}</b></span>
 
-						<form action="{{route('customer_information')}}" method="POST">
+						<form action="{{route('customer_information')}}" method="POST" enctype="multipart/form-data">
                             @csrf
 
                             <input type="hidden" name="user_id" value="{{auth()->user()->id}}">
@@ -84,7 +84,7 @@
                             <div class="form-group">
                                 <label for="">Name</label>
 
-                                <input type="text" name="username" class="form-control" placeholder="Enter customer name..." required>
+                                <input type="text" name="username" class="form-control" value="{{auth()->user()->name}}" disabled>
 
                                 @error("username")
                                 <div class="text-danger">{{ $message }}</div>
@@ -109,6 +109,22 @@
                                 @error("address")
                                     <div class="text-danger">{{$message}}</div>
                                 @enderror
+                            </div>
+
+                            <input type="hidden" name="payment_status" value="Paid" class="form-control">
+
+
+                            <label for="">Insert Payment Screenshot</label>
+                            <div class="form-group row">
+                                <div class="col-sm-5">
+                                    <img src="{{asset('fronts/photos/qrcode.png')}}" alt="" class="w-100 h-100">
+                                </div>
+
+                                <div class="col-sm-7">
+                                    <input type="file" name="payment_screenshot" class="form-control">
+                                </div>
+
+
                             </div>
 
                             <button type="submit" class="btn btn-md btn-success w-100">Order</button>

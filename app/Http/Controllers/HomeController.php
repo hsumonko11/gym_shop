@@ -21,9 +21,21 @@ class HomeController extends Controller
         return view('fronts.layouts.home',compact('products','category_one','category_two','category_three'));
     }
 
-    public function shop(){
+    public function shop(Request $request){
+        if($request->category_id != null){
+            $search = $request->category_id;
+            if($search == 'all'){
+                $products = Product::where('quantity', '!=',0)->latest('id')->paginate(16);
+            }else{
+                $products = Product::where('quantity', '!=',0)
+                                    ->where('category_id',$search)
+                                    ->latest('id')->paginate(16);
+            }
 
-        $products = Product::where('quantity', '!=',0)->latest('id')->paginate(16);
+        }else{
+            $products = Product::where('quantity', '!=',0)->latest('id')->paginate(16);
+        }
+
 
         $categories = Category::get();
 
@@ -138,7 +150,6 @@ class HomeController extends Controller
     public function customerInformation(Request $request){
 
         $request->validate([
-            "username" => "required",
             "phone" => "required",
             "address" => "required",
         ]);
@@ -146,10 +157,25 @@ class HomeController extends Controller
         $customer = new Customer;
         $customer->user_id = $request->user_id;
         $customer->order_id = $request->order_id;
-        $customer->username = $request->username;
+        $customer->username = auth()->user()->name;
         $customer->phone = $request->phone;
         $customer->address = $request->address;
         $customer->save();
+
+        $order = Order::where('id',$request->order_id)->first();
+
+        if($request->hasFile('payment_screenshot')){
+            $image = $request->file('payment_screenshot');
+            $image_name = $image->getClientOriginalName();
+            $image_unique = time().'-'.$image_name;
+            $image->storeAs('public/payment_screenshots',$image_unique);
+
+            $order->payment_screenshot = $image_unique;
+        }
+
+        $order->payment_status = $request->payment_status;
+
+        $order->save();
 
         return redirect()->route('shop')->with('success','Ordered Successfully.');
     }
@@ -189,5 +215,16 @@ public function insertPaymentScreenshot($id,Request $request){
 
         return back()->with('success','Adding Payment Screenshot is successful.');
 
+    }
+
+    public function category(Request $request){
+        if($request->search){
+            $categories = Category::where('name','LIKE',$request->search.'%')
+                                    ->latest('id')
+                                    ->paginate(16);
+        }else{
+            $categories = Category::latest('id')->paginate(16);
+        }
+        return view('fronts.categories.category',compact('categories'));
     }
 }

@@ -103,6 +103,10 @@
 								<a href="{{route('shop')}}" class="font-weight-bold" style="font-size: 20px;" >ကုန်ပစ္စည်းများ</a>
 							</li>
 
+                            <li class="@yield('category-active')">
+								<a href="{{route('category')}}" class="font-weight-bold" style="font-size: 20px;" >အမျိုးအစားများ</a>
+							</li>
+
 							<li class="@yield('blog-active')">
 								<a href="{{route('blog')}}" class="font-weight-bold" style="font-size: 20px;" >သတင်းများ</a>
 							</li>
@@ -221,6 +225,10 @@
 
                 <li class="@yield('shop-active')">
                     <a href="{{route('shop')}}">Shop</a>
+                </li>
+
+                <li class="@yield('category-active')">
+                    <a href="{{route('category')}}">အမျိုးအစားများ</a>
                 </li>
 
                 <li class="@yield('blog-active')">

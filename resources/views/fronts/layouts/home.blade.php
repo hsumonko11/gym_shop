@@ -46,7 +46,7 @@
 								<h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
 									Gym Accessories Shop မှာ
 								</h2>
-                                <!-- <p>ဘယ်မြို့နယ်မဆို အိမ်အရောက် ငွေချေနဲ့ ဝယ်ယူနိုင်ပြီနော်</p> -->
+                               <p>ဈေးနှုန်းသက်သက်သာသာနဲ့</p>
                                 <br>
 							</div>
 
@@ -75,7 +75,7 @@
 							</div>
 
 							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+								<a href="{{route('shop')}}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									အခုပဲ ဝယ်ယူလိုက်ကြရအောင်!
 								</a>
 							</div>

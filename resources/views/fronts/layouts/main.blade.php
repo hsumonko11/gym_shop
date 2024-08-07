@@ -107,12 +107,10 @@
 								<a href="{{route('category')}}" class="font-weight-bold" style="font-size: 20px;" >အမျိုးအစားများ</a>
 							</li>
 
-							<li class="@yield('blog-active')">
-								<a href="{{route('blog')}}" class="font-weight-bold" style="font-size: 20px;" >သတင်းများ</a>
-							</li>
+
 
 							<li class="@yield('about-active')">
-								<a href="{{route('about')}}" class="font-weight-bold" style="font-size: 20px;" ></a>
+								<a href="{{route('about')}}" class="font-weight-bold" style="font-size: 20px;" >အကြောင်းအရာ</a>
 							</li>
 
 							<li class="@yield('contact-active')">
@@ -121,6 +119,10 @@
 
                             <li class="@yield('bmi-active')">
 								<a href="{{route('bmi')}}" class="font-weight-bold" style="font-size: 20px;" >BMI </a>
+							</li>
+
+                            <li class="@yield('blog-active')">
+								<a href="{{route('blog')}}" class="font-weight-bold" style="font-size: 20px;" >အသုံးပြုပုံ</a>
 							</li>
 						</ul>
 					</div>
@@ -280,19 +282,28 @@
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
-						Help
+						အကူအညီရယူရန်
 					</h4>
 
 					<ul>
-						<li class="p-b-10">
+
+                        <li class="p-b-10">
 							<a href="{{route('about')}}" class="stext-107 cl7 hov-cl1 trans-04">
-								About
-							</a>
+                                ဝဘ်ဆိုက်အကြောင်း အသေးစိတ်ဖတ်ရှုရန်
+                        </a>
+						</li>
+
+
+						<li class="p-b-10">
+							<a href="{{route('blog')}}" class="stext-107 cl7 hov-cl1 trans-04">
+                                ဝဘ်ဆိုက်အသုံးပြုပုံ
+                        </a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="{{route('contact')}}" class="stext-107 cl7 hov-cl1 trans-04">
-								Contact
+
+                            Admin teamနှင့် ဆက်သွယ်ရန်
 							</a>
 						</li>
 
@@ -301,12 +312,15 @@
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
-						GET IN TOUCH
+						ဆိုင်လိပ်စာ
 					</h4>
 
 					<p class="stext-107 cl7 size-201">
-						Any questions? Let us know in shop at Gym Accessories Shop 8th floor, Lorem 1<sup>st</sup> St, Ipsum Township, Myanmar or call us on (+959) 987 654 321
-					</p>
+
+                        အမှတ်(112) ၊ ဦးရွှေဒွေးလမ်း<br>
+                        ရုံးကြီးရပ်ကွက်၊ ဟင်္သာတမြို့နယ်<br>
+                        +959 785 966 572
+                    </p>
 
 					{{-- <div class="p-t-27">
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">

@@ -12,15 +12,15 @@
                     <div class="card-body">
                         <div class="mt-4">
                             <label for="">Weight (lb)</label>
-                            <input type="number" name="weight" id="weight" class="form-control" min="0" required placeholder="Enter Weight(lb)...">
+                            <input type="number" name="weight" id="weight" class="form-control" min="0" required placeholder="အလေးချိန် ( ပေါင် ) ...">
                         </div>
                         <div class="mt-4">
                             <label for="">Height (inch)</label>
-                            <input type="number" name="height" id="height" class="form-control" min="0" required placeholder="Enter Height(inch)...">
+                            <input type="number" name="height" id="height" class="form-control" min="0" required placeholder="အရပ် ( လက်မ )...">
                         </div>
 
                         <div class="mt-4">
-                            <button type="button" class="btn btn-md btn-success calculate w-100">Calculate</button>
+                            <button type="button" class="btn btn-md btn-primary calculate w-100">တွက်ချက်မည်</button>
                         </div>
                     </div>
 

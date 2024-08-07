@@ -47,11 +47,14 @@
 
                     <div class="size-212 p-t-2">
                         <span class="mtext-110 cl2">
-                            Address
+                            ဆိုင်လိပ်စာ
                         </span>
 
                         <p class="stext-115 cl6 size-213 p-t-18">
-                            Gym Accessories Shop 8th floor, Lorem 1<sup>st</sup> St, Ipsum Township, Myanmar
+                            Gym Accessories Shop <br>
+                            အမှတ်(112) ၊ ဦးရွှေဒွေးလမ်း<br>
+                            ရုံးကြီးရပ်ကွက်၊ ဟင်္သာတမြို့နယ်
+
                         </p>
                     </div>
                 </div>
@@ -63,11 +66,11 @@
 
                     <div class="size-212 p-t-2">
                         <span class="mtext-110 cl2">
-                            Lets Talk
+                            ဖုန်းဖြင့်ဆက်သွယ်လိုပါက
                         </span>
 
                         <p class="stext-115 cl1 size-213 p-t-18">
-                            +959 987 654 321
+                            +959 785 966 572
                         </p>
                     </div>
                 </div>
@@ -79,11 +82,11 @@
 
                     <div class="size-212 p-t-2">
                         <span class="mtext-110 cl2">
-                            Sale Support
+                            အီးမေးလ်
                         </span>
 
                         <p class="stext-115 cl1 size-213 p-t-18">
-                            hsumonko139@gmail.com
+                            gymaccessoriesshop@gmail.com
                         </p>
                     </div>
                 </div>

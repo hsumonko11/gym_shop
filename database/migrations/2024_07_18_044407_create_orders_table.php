@@ -16,6 +16,7 @@ return new class extends Migration
             $table->integer('customer_id')->nullable();
             $table->text('voucher_no')->nullable();
             $table->double('total_amount')->default(0);
+            $table->enum('status',['Pending','Shipped','Delivered','Cancelled'])->default('Pending');
             $table->enum('payment_status',['Paid','Unpaid'])->default ('Unpaid');
             $table->text('payment_screenshot')->nullable();
             $table->timestamps();

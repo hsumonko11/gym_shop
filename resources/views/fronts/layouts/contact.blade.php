@@ -3,7 +3,7 @@
 @section('contact-active','active-menu')
 
 @section('content')
-<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('fronts/photos/gym1.jpg');">
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('fronts/photos/gym11.jpg');">
     <h2 class="ltext-105 cl0 txt-center">
         Contact
     </h2>

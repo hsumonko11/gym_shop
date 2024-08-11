@@ -241,17 +241,15 @@
             <a href="{{route('shop_category',$category->id)}}">
                 <div class="card card-shadow">
                     <!-- Block2 -->
+                    <div class="card-header text-center" style="background-color: #a4bbb8;">
+                        {{$category->name}}
+                    </div>
 
-                        <div class="card-header text-center ">
-                            {{$category->name}}
-                        </div>
-
-                        <div class="card-body block2-txt flex-w flex-t p-t-14">
-                            {{$category->description}}
-                        </div>
-
+                    <div class="card-body block2-txt flex-w flex-t p-t-14">
+                        {{$category->description}}
+                    </div>
                 </div>
-            </a>
+
 
             </div>
             @endforeach

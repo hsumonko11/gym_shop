@@ -25,7 +25,7 @@ class HomeController extends Controller
         if($request->category_id != null){
             $search = $request->category_id;
             if($search == 'all'){
-                $products = Product::where('quantity', '!=',0)->latest('id')->paginate(16);
+                $products = Product::latest('id')->paginate(16);
             }else{
                 $products = Product::where('quantity', '!=',0)
                                     ->where('category_id',$search)
@@ -33,7 +33,7 @@ class HomeController extends Controller
             }
 
         }else{
-            $products = Product::where('quantity', '!=',0)->latest('id')->paginate(16);
+            $products = Product::latest('id')->paginate(16);
         }
 
 
@@ -45,7 +45,7 @@ class HomeController extends Controller
     public function shopWithCategory($category_id){
 
         $products = Product::where('category_id',$category_id)
-                                ->where('quantity', '!=',0)->latest('id')
+                                ->latest('id')
                                 ->paginate(16);
 
         $categories = Category::get();
@@ -154,13 +154,17 @@ class HomeController extends Controller
             "address" => "required",
         ]);
 
-        $customer = new Customer;
-        $customer->user_id = $request->user_id;
-        $customer->order_id = $request->order_id;
-        $customer->username = auth()->user()->name;
-        $customer->phone = $request->phone;
-        $customer->address = $request->address;
-        $customer->save();
+        $user_id = Customer::where('user_id',$request->user_id)->first();
+        if(!$user_id){
+            $customer = new Customer;
+            $customer->user_id = $request->user_id;
+            $customer->order_id = $request->order_id;
+            $customer->username = auth()->user()->name;
+            $customer->phone = $request->phone;
+            $customer->address = $request->address;
+            $customer->save();
+        }
+        
 
         $order = Order::where('id',$request->order_id)->first();
 

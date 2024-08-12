@@ -70,7 +70,7 @@
                                 <th>Customer</th>
                                 <th>Total Amount</th>
                                 <th>Status</th>
-                                <th>Action</th>
+                                <!-- <th>Action</th> -->
                             </tr>
                         </thead>
 
@@ -92,7 +92,7 @@
                                             <span class="badge badge-danger">Cancelled</span>
                                         @endif
                                     </td>
-                                    <td>
+                                    <!-- <td>
                                         @if($order->payment_status == 'Unpaid')
                                         <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#unpaid{{$order->id}}">
                                             Unpaid
@@ -143,7 +143,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </td>
+                                    </td> -->
 
                                 </tr>
                             @endforeach

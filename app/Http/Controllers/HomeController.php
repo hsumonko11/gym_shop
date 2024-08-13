@@ -69,13 +69,13 @@ class HomeController extends Controller
             $cart->quantity = $request->quantity;
             $cart->save();
 
-            return redirect()->route('shop')->with('success','Added into the cart successfully.');
+            return redirect()->route('shop')->with('success','ရွေးချယ်ထားသောပစ္စည်းအား ဈေးခြင်းထဲသို့ ထည့်ပြီးပါပြီ');
         }else{
-            return back()->with('warning','The stock is lower than your ordering quantity.');
+            return back()->with('warning','ကုန်ပစ္စည်းလက်ကျန်မလုံလောက်ပါ ');
         }
 
         }else{
-            return redirect()->route('customer_login_page')->with('warning','You need to Login');
+            return redirect()->route('customer_login_page')->with('warning','အကောင့်ထဲသို့ ဝင်ရောက်ပေးပါ');
         }
     }
 
@@ -84,7 +84,7 @@ class HomeController extends Controller
             $carts = Cart::where('customer_id',auth()->user()->id)->get();
             return view('fronts.shops.cart',compact('carts'));
         }else{
-            return redirect()->route('customer_login_page')->with('warning','You need to Login');
+            return redirect()->route('customer_login_page')->with('warning','အကောင့်ထဲသို့ ဝင်ရောက်ပေးပါ');
         }
     }
 
@@ -164,7 +164,7 @@ class HomeController extends Controller
             $customer->address = $request->address;
             $customer->save();
         }
-        
+
 
         $order = Order::where('id',$request->order_id)->first();
 
@@ -181,7 +181,7 @@ class HomeController extends Controller
 
         $order->save();
 
-        return redirect()->route('shop')->with('success','Ordered Successfully.');
+        return redirect()->route('shop')->with('success','ပစ္စည်းမှာယူခြင်း ‌‌‌‌‌‌အောင်မြင်ပါသည်');
     }
 
     public function about(){

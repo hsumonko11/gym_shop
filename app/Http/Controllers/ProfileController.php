@@ -67,6 +67,6 @@ class ProfileController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
 
-        return back()->with('success','Profile updated successfully.');
+        return back()->with('success','ကိုယ်ရေးမှတ်တမ်းပြင်ဆင်ခြင်း အောင်မြင်ပါတယ်');
     }
 }

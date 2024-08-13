@@ -58,7 +58,7 @@
                         <form action="{{route('customer_logout')}}" method="POST">
                             @csrf
 
-                            <button type="submit" class="btn btn-sm btn-default text-muted mt-1">Logout</button>
+                            <button type="submit" class="btn btn-sm btn-default text-muted mt-1">အကောင့်မှထွက်မည်</button>
                         </form>
 
                         <a href="{{route('profile_page')}}" class="flex-c-m trans-04 p-lr-25">
@@ -67,11 +67,11 @@
 
                         @else
 						<a href="{{route('customer_login_page')}}" class="flex-c-m trans-04 p-lr-25" target="_blank">
-							Login
+							အကောင့်ထဲသို့ဝင်ရောက်မည်
 						</a>
 
 						<a href="{{route('customer_register_page')}}" class="flex-c-m trans-04 p-lr-25" target="_blank">
-							Register
+							စာရင်းသွင်းမည်
 						</a>
                         @endauth
 
@@ -209,11 +209,11 @@
 
                         @else
 						<a href="{{route('customer_login_page')}}" class="flex-c-m trans-04 p-lr-25" target="_blank">
-							Login
+							အကောင့်ထဲသို့ဝင်ရောက်မည်
 						</a>
 
 						<a href="{{route('customer_register_page')}}" class="flex-c-m trans-04 p-lr-25" target="_blank">
-							Register
+							စာရင်းသွင်းမည်
 						</a>
                         @endauth
 					</div>
@@ -282,7 +282,7 @@
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
-						အကူအညီရယူရန်
+						အခက်အခဲတစ်စုံတစ်ရာရှိပါက
 					</h4>
 
 					<ul>

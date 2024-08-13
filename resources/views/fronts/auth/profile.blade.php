@@ -27,7 +27,7 @@
 
 <div class="card card-shadow">
     <div class="card-header">
-        Edit Profile
+        ကိုယ်ရေးမှတ်တမ်း ပြောင်းလဲမည် ?
     </div>
     <div class="card-body">
         <form action="{{route('change_user_profile',auth()->user()->id)}}" method="POST">
@@ -35,17 +35,17 @@
             @method('PUT')
 
             <div class="form-group">
-                <label for="">Name</label>
+                <label for="">အမည်</label>
                 <input type="text" name="name" class="form-control" value="{{auth()->user()->name}}" required>
             </div>
 
             <div class="form-group">
-                <label for="">Email</label>
+                <label for="">အီးမေးလ်</label>
                 <input type="email" name="email" class="form-control" value="{{auth()->user()->email}}" required>
             </div>
 
             <div class="form-group">
-                <label for="">Password</label>
+                <label for="">စကားဝှက်</label>
                 <input type="password" name="password" class="form-control" required>
 
                 @error("password")
@@ -53,7 +53,7 @@
                 @enderror
             </div>
 
-            <button type="submit" class="btn btn-md btn-success w-100">Change</button>
+            <button type="submit" class="btn btn-md btn-success w-100">အတည်ပြုမည်</button>
         </form>
     </div>
 </div>
@@ -65,11 +65,11 @@
                     <table class="table table-striped table-hover">
                         <thead class="thead-dark">
                             <tr>
-                                <th>Date</th>
-                                <th>Voucher Code</th>
-                                <th>Customer</th>
-                                <th>Total Amount</th>
-                                <th>Status</th>
+                                <th>ရက်စွဲ</th>
+                                <th>ဘောင်ချာအမှတ်</th>
+                                <th>အမည်</th>
+                                <th>စုစုပေါင်းကျသင့်ငွေ</th>
+                                <th>ကုန်ပစ္စည်းအခြေအနေ</th>
                                 <!-- <th>Action</th> -->
                             </tr>
                         </thead>
@@ -83,13 +83,13 @@
                                     <td>{{$order->total_amount}}</td>
                                     <td>
                                         @if($order->status == "Pending")
-                                            <span class="badge badge-warning">Pending</span>
+                                            <span class="badge badge-warning">ဆိုင်းငံ့ထားသည်</span>
                                         @elseif($order->status == "Shipped")
-                                            <span class="badge badge-info">Shipped</span>
+                                            <span class="badge badge-info">တင်ပို့ခဲ့သည်</span>
                                         @elseif($order->status == "Delivered")
-                                            <span class="badge badge-success">Delivered</span>
+                                            <span class="badge badge-success">ပေးပို့ခဲ့သည်</span>
                                         @elseif($order->status == "Cancelled")
-                                            <span class="badge badge-danger">Cancelled</span>
+                                            <span class="badge badge-danger">ပယ်ဖျက်ခဲ့သည်</span>
                                         @endif
                                     </td>
                                     <!-- <td>

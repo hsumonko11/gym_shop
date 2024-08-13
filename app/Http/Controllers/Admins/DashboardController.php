@@ -52,7 +52,7 @@ class DashboardController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
 
-        return back()->with('success','Profile updated successfully.');
+        return back()->with('success','ကိုယ်ရေးမှတ်တမ်းပြင်ဆင်ခြင်း အောင်မြင်ပါတယ်');
     }
     public function contactUs(Request $request){
         if($request->search){
@@ -68,7 +68,7 @@ class DashboardController extends Controller
     public function deleteContact($id){
         Contact::where('id',$id)->delete();
 
-        return back()->with('success','Deleted Successfully.');
+        return back()->with('success','ပယ်ဖျက်ခြင်းအောင်မြင်ပါသည်');
     }
 
 }

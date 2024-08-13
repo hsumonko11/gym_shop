@@ -22,6 +22,6 @@ class ContactController extends Controller
         $contact->note = $request->note;
         $contact->save();
 
-        return back()->with('success','Message sent successfully.');
+        return back()->with('success','အကြံပြုစာပေးပို့ခြင်း အောင်မြင်ပါတယ်');
     }
 }

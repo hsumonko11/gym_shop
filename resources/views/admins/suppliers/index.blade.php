@@ -7,8 +7,8 @@
     <div class="page-inner">
         <div class="row">
             <div class="col-sm-4">
-                <h3 class="fw-bold mb-3">Supplier</h3>
-                <h6 class="op-7 mb-2">Total - {{$suppliers->total()}}</h6>
+                <h3 class="fw-bold mb-3">ကုန်ပစ္စည်းတင်သွင်းသူများ </h3>
+                <h6 class="op-7 mb-2" style=" font-size: 20px">တင်သွင်းသူ စုစုပေါင်း - {{$suppliers->total()}}</h6>
             </div>
 
             <div class="col-sm-4 offset-sm-4">
@@ -36,11 +36,11 @@
                 <table class="table table-striped table-hover">
                     <thead class="thead-dark">
                         <tr>
-                            <th>Name</th>
-                            <th>Contact Person</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Address</th>
+                            <th>ကုမ္ပဏီအမည်</th>
+                            <th>တင်သွင်းသူအမည်</th>
+                            <th> အီးမေးလ်</th>
+                            <th>ဖုန်း</th>
+                            <th>လိပ်စာ</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -61,7 +61,7 @@
                                         @csrf
                                         @method('DELETE')
 
-                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-sm btn-danger">ပယ်ဖျက်မည်</button>
                                     </form>
                                 </td>
                             </tr>

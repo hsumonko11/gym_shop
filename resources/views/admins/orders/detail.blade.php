@@ -7,8 +7,8 @@
     <div class="page-inner">
         <div class="row">
             <div class="col-sm-4">
-                <h3 class="fw-bold mb-3">Orders Detail</h3>
-                <h6 class="op-7 mb-2">Total - {{count($order_details)}}</h6>
+                <h3 class="fw-bold mb-3">မှာယူမှုအသေးစိတ်</h3>
+                <h6 class="op-7 mb-2" style=" font-size: 20px">မှာယူသော အရေအတွက် - {{count($order_details)}}</h6>
             </div>
 
             <div class="col-sm-4 offset-sm-4">
@@ -27,9 +27,9 @@
                 <table class="table table-striped table-hover">
                     <thead class="thead-dark">
                         <tr>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
+                            <th>ကုန်ပစ္စည်း</th>
+                            <th>အရေအတွက်</th>
+                            <th>ဈေးနှုန်း</th>
                             {{-- <th>Action</th> --}}
                         </tr>
                     </thead>

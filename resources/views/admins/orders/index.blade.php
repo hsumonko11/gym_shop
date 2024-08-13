@@ -7,8 +7,8 @@
     <div class="page-inner">
         <div class="row">
             <div class="col-sm-4">
-                <h3 class="fw-bold mb-3">Orders</h3>
-                <h6 class="op-7 mb-2">Total - {{$orders->total()}}</h6>
+                <h3 class="fw-bold mb-3">ကုန်ပစ္စည်းမှာယူမှုများ . . .</h3>
+                <h6 class="op-7 mb-2"  style="font-size: 20px">မှာယူသောအရေအတွက် စုစုပေါင်း - {{$orders->total()}}</h6>
             </div>
 
             <div class="col-sm-4 offset-sm-4">

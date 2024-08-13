@@ -31,7 +31,7 @@
                         @method('PUT')
 
                         <div>
-                            <label for="name">Name</label>
+                            <label for="name">ကုမ္ပဏီအမည်</label>
 
                             <input type="text" name="name" id="name" class="form-control" value="{{$supplier->name}}">
 
@@ -41,31 +41,31 @@
                         </div>
 
                         <div class="mt-2">
-                            <label for="contact_person">Contact Person</label>
+                            <label for="contact_person">တင်သွင်းသူအမည်</label>
 
                             <input type="text" name="contact_person" id="contact_person" class="form-control" value="{{$supplier->contact_person}}">
                         </div>
 
                         <div class="mt-2">
-                            <label for="email">Email</label>
+                            <label for="email">အီးမေးလ်</label>
 
                             <input type="email" name="email" id="email" class="form-control" value="{{$supplier->email}}">
                         </div>
 
                         <div class="mt-2">
-                            <label for="phone">Phone</label>
+                            <label for="phone">ဖုန်း</label>
 
                             <input type="text" name="phone" id="phone" class="form-control" value="{{$supplier->phone}}">
                         </div>
 
                         <div class="mt-2">
-                            <label for="contact_person">Address</label>
+                            <label for="contact_person">လိပ်စာ</label>
 
                             <input type="text" name="address" id="address" class="form-control" value="{{$supplier->address}}">
                         </div>
 
 
-                        <button type="submit" class="btn btn-md btn-success mt-2 w-100">Update</button>
+                        <button type="submit" class="btn btn-md btn-success mt-2 w-100">ပြင်ဆင်မည်</button>
                     </form>
                 </div>
             </div>

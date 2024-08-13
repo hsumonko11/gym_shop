@@ -138,7 +138,7 @@
                                                     <i class="fs-16 zmdi zmdi-minus"></i>
                                                 </div>
 
-                                                <input class="mtext-104 cl3 txt-center num-product quantity" type="number" name="quantity" value="{{$cart->quantity}}">
+                                                <input class="mtext-104 cl3 txt-center num-product quantity" type="number" name="quantity" value="{{$cart->quantity}}" min="1">
 
                                                 <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m quantity-sign">
                                                     <i class="fs-16 zmdi zmdi-plus"></i>

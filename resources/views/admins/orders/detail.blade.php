@@ -54,27 +54,30 @@
 
         <div class="col-sm-4">
             <div class="card">
-                @if(isset($customer))
+                <div class="card-header">
+                    <p class="m-0"><i class="fab fa-gg"></i> Customer Name - {{$order->user != null ? $order->user->name : ''}}</p>    
+                    <p class="m-0"><i class="fab fa-gg"></i> Customer Phone - {{$order->customer != null ? $order->customer->phone : ''}}</p>                          
+                    <p class="m-0"><i class="fab fa-gg"></i> Customer Address - {{$order->customer != null ? $order->customer->address : ''}}</p>          
+                    <p class="m-0"><i class="fab fa-gg"></i> Payment Status - {{$order->payment_status}}
+                        @if($order->payment_status == "Paid")
+                        <button type="button" class="btn btn-default text-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            View Slip
+                        </button>
+                        @endif
+                    </p>
 
- <p><i class="fab fa-gg"></i> Payment Status - {{$order->payment_status}}
-    @if($order->payment_status == "Paid")
-    <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        View Slip
-    </button>
-    @endif
-</p>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="{{asset('storage/payment_screenshots/'.$order->payment_screenshot)}}" alt="" class="w-100 h-75">
+                                </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <img src="{{asset('storage/payment_screenshots/'.$order->payment_screenshot)}}" alt="" class="w-100 h-75">
-            </div>
-
-        </div>
-    </div>
-</div>
-                @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
                 <div class="card-body text-center">
                     <h5 class="text-primary"><b>Change Status</b></h5>
                     <form action="{{route('admin.orders.update',$order->id)}}" method="POST">

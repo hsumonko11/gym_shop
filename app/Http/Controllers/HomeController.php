@@ -177,7 +177,7 @@ class HomeController extends Controller
             $order->payment_screenshot = $image_unique;
         }
 
-        $order->payment_status = $request->payment_status;
+        $order->payment_status = "Paid";
 
         $order->save();
 

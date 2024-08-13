@@ -87,8 +87,8 @@
                                 <input type="text" name="username" class="form-control" value="{{auth()->user()->name}}" disabled>
 
                                 @error("username")
-                                <div class="text-danger">{{ $message }}</div>
-                            @enderror
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="form-group">
@@ -127,7 +127,7 @@
 
                             </div>
 
-                            <button type="submit" class="btn btn-md btn-success w-100">Order</button>
+                            <button type="submit" class="btn btn-md btn-success w-100">Submit</button>
 
                         </form>
 					</div>

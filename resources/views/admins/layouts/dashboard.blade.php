@@ -41,7 +41,7 @@
                             <div class="col col-stats ms-3 ms-sm-0">
 
                                 <div class="numbers">
-                                    <p class="card-category">Total Income is</p>
+                                    <p class="card-category" style="font-size: 20px">စုစုပေါင်းဝင်ငွေ</p>
                                     <h4 class="card-title">{{number_format($grandTotal)}} MMK</h4>
                                 </div>
 
@@ -65,7 +65,7 @@
                             <div class="col col-stats ms-3 ms-sm-0">
 
                                 <div class="numbers">
-                                    <p class="card-category">Total Expense is</p>
+                                    <p class="card-category" style="font-size: 20px">စုစုပေါင်းအသုံးစရိတ်</p>
                                     <h4 class="card-title">{{number_format($totalExpense)}} MMK</h4>
                                 </div>
 
@@ -89,7 +89,7 @@
                             <div class="col col-stats ms-3 ms-sm-0">
 
                                 <div class="numbers">
-                                    <p class="card-category">Total Profit is</p>
+                                    <p class="card-category" style="font-size: 20px">စုစုပေါင်းအမြတ်ငွေ</p>
                                     <h4 class="card-title">{{number_format($totalProfit)}} MMK</h4>
                                 </div>
 
@@ -119,7 +119,7 @@
                                 <div class="col text-center">
 
                                     <div class="numbers">
-                                        <p class="card-category">Products</p>
+                                        <p class="card-category" style="font-size: 20px">ကုန်ပစ္စည်းများ</p>
                                         <h4 class="card-title">{{count($products)}}</h4>
                                     </div>
 
@@ -143,7 +143,7 @@
                             </div>
                             <div class="col text-center">
                             <div class="numbers">
-                                <p class="card-category">Categories</p>
+                                <p class="card-category" style="font-size: 20px">အမျိုးအစားများ</p>
                                 <h4 class="card-title">{{count($categories)}}</h4>
                             </div>
                             </div>
@@ -166,7 +166,7 @@
                                 </div>
                                 <div class="col text-center">
                                 <div class="numbers">
-                                    <p class="card-category">Suppliers</p>
+                                    <p class="card-category" style="font-size: 20px">တင်သွင်းသူများ</p>
                                     <h4 class="card-title">{{count($suppliers)}}</h4>
                                 </div>
                                 </div>
@@ -217,7 +217,7 @@
                                 </div>
                                 <div class="col text-center">
                                     <div class="numbers">
-                                        <p class="card-category">Orders</p>
+                                        <p class="card-category" style="font-size: 20px" >ကုန်ပစ္စည်းမှာယူမှုများ</p>
                                         <h4 class="card-title">{{count($orders)}}</h4>
                                     </div>
                                 </div>
@@ -241,7 +241,7 @@
                                 </div>
                                 <div class="col text-center">
                                     <div class="numbers">
-                                        <p class="card-category">Customers</p>
+                                        <p class="card-category" style="font-size: 20px">ဈေးဝယ်သူများ</p>
                                         <h4 class="card-title">{{count($customers)}}</h4>
                                     </div>
                                 </div>

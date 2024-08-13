@@ -57,7 +57,7 @@ class SupplierProductController extends Controller
             $product->save();
         }
 
-        return redirect()->route('admin.supplier_products.index')->with('success','Created Successfully!');
+        return redirect()->route('admin.supplier_products.index')->with('success','အသစ်ထည့်ခြင်း အောင်မြင်ပါသည်!');
     }
 
     /**
@@ -94,7 +94,7 @@ class SupplierProductController extends Controller
         $supplier_product->save();
 
 
-        return redirect()->route('admin.supplier_products.index')->with('success','Updated Successfully!');
+        return redirect()->route('admin.supplier_products.index')->with('success','ပြင်ဆင်ခြင်း အောင်မြင်ပါသည် !');
     }
 
     /**
@@ -104,6 +104,6 @@ class SupplierProductController extends Controller
     {
         SupplierProduct::where('id',$id)->delete();
 
-        return back()->with('success','Deleted Successfully!');
+        return back()->with('success','ပယ်ဖျက်ခြင်း အောင်မြင်ပါသည်!');
     }
 }

@@ -36,11 +36,11 @@
                 <table class="table table-striped table-hover">
                     <thead class="thead-dark">
                         <tr>
-                            <th>Date</th>
-                            <th>Voucher Code</th>
-                            <th>Customer</th>
-                            <th>Total Amount</th>
-                            <th>Status</th>
+                            <th>နေ့စွဲ</th>
+                            <th>ဘောက်ချာအမှတ်</th>
+                            <th>အမည်</th>
+                            <th>စုစုပေါင်းကျသင့်ငွေ</th>
+                            <th>မှာယူမှုအခြေအနေ</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -54,17 +54,17 @@
                                 <td>{{$order->total_amount}}</td>
                                 <td>
                                     @if($order->status == "Pending")
-                                        <span class="badge badge-warning">Pending</span>
+                                        <span class="badge badge-warning" style="font-size: 15px">ဆိုင်းငံ့ထားသည်</span>
                                     @elseif($order->status == "Shipped")
-                                        <span class="badge badge-info">Shipped</span>
+                                        <span class="badge badge-info" style="font-size: 15px">ပေးပို့နေသည်</span>
                                     @elseif($order->status == "Delivered")
-                                        <span class="badge badge-success">Delivered</span>
+                                        <span class="badge badge-success" style="font-size: 15px">ပေးပို့ပြီး</span>
                                     @elseif($order->status == "Cancelled")
-                                        <span class="badge badge-danger">Cancelled</span>
+                                        <span class="badge badge-danger" style="font-size: 15px">ပယ်ဖျက်လိုက်သည်</span>
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{route('admin.orders.show',$order->id)}}"><button type="button" class="btn btn-sm btn-info">Order Detail</button></a>
+                                    <a href="{{route('admin.orders.show',$order->id)}}"><button type="button" class="btn btn-sm btn-info"  style="font-size: 16px">မှာယူမှုအသေးစိတ် </button></a>
                                 </td>
 
                             </tr>

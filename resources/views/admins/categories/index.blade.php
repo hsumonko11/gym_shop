@@ -16,7 +16,7 @@
                     @csrf
 
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="search" value="{{request()->search}}" placeholder="Search Name..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control" name="search" value="{{request()->search}}" placeholder="ကုန်ပစ္စည်းအမျိုးအစား..." aria-label="Recipient's username" aria-describedby="basic-addon2">
                         <div class="input-group-append">
                           <button type="submit" class="btn btn-md btn-success input-group-text" id="basic-addon2">Search</button>
                         </div>
@@ -35,8 +35,8 @@
                 <table class="table table-striped table-hover">
                     <thead class="thead-dark">
                         <tr>
-                            <th>Name</th>
-                            <th>Description</th>
+                            <th>အမျိုးအစား</th>
+                            <th>ဖော်ပြချက်</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -72,13 +72,13 @@
         <div class="col-sm-4">
             <div class="card">
                 <div class="card-header">
-                    Create
+                    အသစ်ထပ်ထည့်မည်
                 </div>
                 <div class="card-body">
                     <form action="{{route('admin.categories.store')}}" method="POST">
                         @csrf
 
-                        <label for="name">Name</label>
+                        <label for="name">အမျိုးအစား</label>
 
                         <input type="text" name="name" id="name" class="form-control">
 
@@ -86,11 +86,11 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
 
-                        <label for="description" class="mt-2">Description</label>
+                        <label for="description" class="mt-2">ဖော်ပြချက်</label>
 
                         <textarea name="description" id="description" cols="30" rows="1" class="form-control"></textarea>
 
-                        <button type="submit" class="btn btn-md btn-success mt-2 w-100">Submit</button>
+                        <button type="submit" class="btn btn-md btn-success mt-2 w-100">အတည်ပြုမည်</button>
                     </form>
                 </div>
             </div>

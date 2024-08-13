@@ -66,9 +66,10 @@ class CustomerController extends Controller
         $customer->username = $request->username;
         $customer->phone = $request->phone;
         $customer->address = $request->address;
+
         $customer->save();
 
-        return redirect()->route('admin.customers.index')->with('success','Updated Successfully.');
+        return redirect()->route('admin.customers.index')->with('success','ပြင်ဆင်ခြင်း အောင်မြင်ပါသည် !');
     }
 
     /**
@@ -77,6 +78,6 @@ class CustomerController extends Controller
     public function destroy(string $id)
     {
         Customer::where('id',$id)->delete();
-        return back()->with('success','Deleted successfully.');
+        return back()->with('success','ပယ်ဖျက်ခြင်း အောင်မြင်ပါသည် !');
     }
 }

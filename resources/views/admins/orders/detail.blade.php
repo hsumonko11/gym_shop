@@ -55,13 +55,13 @@
         <div class="col-sm-4">
             <div class="card">
                 <div class="card-header">
-                    <p class="m-0"><i class="fab fa-gg"></i> Customer Name - {{$order->user != null ? $order->user->name : ''}}</p>    
-                    <p class="m-0"><i class="fab fa-gg"></i> Customer Phone - {{$order->customer != null ? $order->customer->phone : ''}}</p>                          
-                    <p class="m-0"><i class="fab fa-gg"></i> Customer Address - {{$order->customer != null ? $order->customer->address : ''}}</p>          
-                    <p class="m-0"><i class="fab fa-gg"></i> Payment Status - {{$order->payment_status}}
+                    <p class="m-0"  style=" font-size: 16px" ><i class="fab fa-gg"></i> ဝယ်ယူသူအမည် - {{$order->user != null ? $order->user->name : ''}}</p>
+                    <p class="m-0" style=" font-size: 16px"><i class="fab fa-gg"></i> ဖုန်းနံပါတ် - {{$order->customer != null ? $order->customer->phone : ''}}</p>
+                    <p class="m-0" style=" font-size: 16px"><i class="fab fa-gg"></i> လိပ်စာ - {{$order->customer != null ? $order->customer->address : ''}}</p>
+                    <p class="m-0" style=" font-size: 16px"><i class="fab fa-gg"></i>  ငွေပေးချေမှု - {{$order->payment_status}}
                         @if($order->payment_status == "Paid")
-                        <button type="button" class="btn btn-default text-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            View Slip
+                        <button type="button" class="btn btn-default text-primary" style=" font-size: 16px" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            ငွေလွှဲပြေစာ
                         </button>
                         @endif
                     </p>
@@ -77,31 +77,31 @@
                         </div>
                     </div>
                 </div>
-              
+
                 <div class="card-body text-center">
-                    <h5 class="text-primary"><b>Change Status</b></h5>
+                    <h5 class="text-primary"><b>မှာယူမှုအခြေအနေ</b></h5>
                     <form action="{{route('admin.orders.update',$order->id)}}" method="POST">
                         @csrf
                         @method('PUT')
 
                         <div class="form-group">
                             <input type="radio" name="status" id="pending" value="Pending" @if("Pending" == $order->status) checked @endif>
-                            <label for="pending">Pending</label>
+                            <label for="pending">ဆိုင်းငံ့ထားသည်</label>
                         </div>
 
                         <div class="form-group">
                             <input type="radio" name="status" id="shipped" value="Shipped" @if("Shipped" == $order->status) checked @endif>
-                            <label for="shipped">Shipped</label>
+                            <label for="shipped">ပေးပို့နေသည်</label>
                         </div>
 
                         <div class="form-group">
                             <input type="radio" name="status" id="delivered" value="Delivered" @if("Delivered" == $order->status) checked @endif>
-                            <label for="delivered">Delivered</label>
+                            <label for="delivered"> ပေးပို့ပြီး</label>
                         </div>
 
                         <div class="form-group">
                             <input type="radio" name="status" id="cancelled" value="Cancelled" @if("Cancelled" == $order->status) checked @endif>
-                            <label for="cancelled">Cancelled</label>
+                            <label for="cancelled">ပယ်ဖျက်လိုက်သည်</label>
                         </div>
 
                         <button type="submit" class="btn btn-md btn-outline-success w-100">Change</button>

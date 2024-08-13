@@ -46,7 +46,7 @@ class SupplierController extends Controller
         $supplier->address = $request->address;
         $supplier->save();
 
-        return redirect()->route('admin.suppliers.index')->with('success','Created Successfully!');
+        return redirect()->route('admin.suppliers.index')->with('success','အသစ်ထည့်ခြင်း အောင်မြင်ပါသည် !');
     }
 
     /**
@@ -79,7 +79,7 @@ class SupplierController extends Controller
         $supplier->address = $request->address;
         $supplier->save();
 
-        return redirect()->route('admin.suppliers.index')->with('success','Updated Successfully!');
+        return redirect()->route('admin.suppliers.index')->with('success','ပြင်ဆင်ခြင်း အောင်မြင်ပါသည် !');
     }
 
     /**
@@ -89,6 +89,6 @@ class SupplierController extends Controller
     {
         Supplier::where('id',$id)->delete();
 
-        return back()->with('success','Deleted Successfully.');
+        return back()->with('success','ပယ်ဖျက်ခြင်း အောင်မြင်ပါသည် !');
     }
 }

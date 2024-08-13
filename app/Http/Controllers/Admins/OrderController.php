@@ -77,7 +77,7 @@ class OrderController extends Controller
             $order->status = $request->status;
             $order->save();
 
-            return redirect()->route('admin.orders.index')->with('success','Changing status is successful.');
+            return redirect()->route('admin.orders.index')->with('success','ကုန်ပစ္စည်းအခြေအနေ ပြောင်းလဲလိုက်သည်');
     }
 
     /**

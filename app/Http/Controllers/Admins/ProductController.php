@@ -58,7 +58,7 @@ class ProductController extends Controller
         // $product->quantity = $request->quantity;
         $product->save();
 
-        return redirect()->route('admin.products.index')->with('success','Created Successfully.');
+        return redirect()->route('admin.products.index')->with('success','ကုန်ပစ္စည်းအသစ်ထည့်ခြင်း အောင်မြင်ပါသည်');
     }
 
     /**
@@ -107,7 +107,7 @@ class ProductController extends Controller
         // $product->quantity = $request->quantity;
         $product->save();
 
-        return redirect()->route('admin.products.index')->with('success','Updated Successfully.');
+        return redirect()->route('admin.products.index')->with('success','ပြင်ဆင်ခြင်း အောင်မြင်ပါသည်');
     }
 
     /**
@@ -123,6 +123,6 @@ class ProductController extends Controller
 
         $product->delete();
 
-        return back()->with('success','Deleted Successfully!');
+        return back()->with('success','ပယ်ဖျက်ခြင်း အောင်မြင်ပါသည်');
     }
 }

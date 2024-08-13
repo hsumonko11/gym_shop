@@ -43,7 +43,7 @@ class CategoryController extends Controller
         $category->description = $request->description;
         $category->save();
 
-        return back()->with('success','Created Successfully.');
+        return back()->with('success','အသစ်ထည့်ခြင်း အောင်မြင်ပါသည် !');
     }
 
     /**
@@ -72,7 +72,7 @@ class CategoryController extends Controller
         $category->description = $request->description;
         $category->save();
 
-        return back()->with('success','Updated Successfully.');
+        return back()->with('success','ပြင်ဆင်ခြင်း အောင်မြင်ပါသည် !');
     }
 
     /**
@@ -82,6 +82,6 @@ class CategoryController extends Controller
     {
         Category::where('id',$id)->delete();
 
-        return back()->with('success','Deleted Successfully.');
+        return back()->with('success','ပယ်ဖျက်ခြင်း အောင်မြင်ပါသည် !');
     }
 }

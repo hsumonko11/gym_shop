@@ -7,8 +7,8 @@
     <div class="page-inner">
         <div class="row">
             <div class="col-sm-4">
-                <h3 class="fw-bold mb-3">Supplier Product</h3>
-                <h6 class="op-7 mb-2">Total - {{$supplier_products->total()}}</h6>
+                <h3 class="fw-bold mb-3">ကုန်ပစ္စည်းတင်သွင်းမှုများ</h3>
+                <h6 class="op-7 mb-2" style=" font-size: 20px" >တင်သွင်းထားသော ကုန်ပစ္စည်းစုစုပေါင်း- {{$supplier_products->total()}}</h6>
             </div>
 
             <div class="col-sm-4 offset-sm-4">
@@ -36,11 +36,11 @@
                 <table class="table table-striped table-hover">
                     <thead class="thead-dark">
                         <tr>
-                            <th>Supplier</th>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Original Price</th>
-                            <th>Last Supplied Date</th>
+                            <th>ကုမ္ပဏီအမည်</th>
+                            <th>ကုန်ပစ္စည်း</th>
+                            <th>အရေအတွက်</th>
+                            <th>တင်သွင်းဈေးနှုန်း</th>
+                            <th>တင်သွင်းသည့်နေ့</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -62,7 +62,7 @@
                                         @csrf
                                         @method('DELETE')
 
-                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-sm btn-danger"> ပယ်ဖျက်မည်</button>
                                     </form>
                                 </td>
                             </tr>

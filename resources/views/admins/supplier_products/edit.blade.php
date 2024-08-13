@@ -7,7 +7,7 @@
     <div class="page-inner">
         <div class="row">
             <div class="col-sm-4">
-                <h3 class="fw-bold mb-3">Edit Supplier Product</h3>
+                <h3 class="fw-bold mb-3">ကုန်ပစ္စည်းတင်သွင်းမှု</h3>
                 <h6 class="op-7 mb-2"></h6>
             </div>
 
@@ -31,7 +31,7 @@
                         @method('PUT')
 
                         <div class="mt-2">
-                            <label for="supplier_id">Supplier</label>
+                            <label for="supplier_id">ကုမ္ပဏီအမည်</label>
 
                             <select name="supplier_id" id="supplier_id" class="form-control">
                                     <option>Select Supplier...</option>
@@ -46,7 +46,7 @@
                         </div>
 
                         <div class="mt-2">
-                            <label for="product_id">Product</label>
+                            <label for="product_id">ကုန်ပစ္စည်း</label>
 
                             <select name="product_id" id="product_id" class="form-control">
                                     <option>Select Product...</option>
@@ -71,18 +71,18 @@
 
 
                         <div class="mt-2">
-                            <label for="price">Price</label>
+                            <label for="price">တင်သွင်းဈေးနှုန်း</label>
 
                             <input type="number" name="price" id="price" step="any" class="form-control" value="{{$supplier_product->original_price}}">
                         </div>
 
                         <div class="mt-2">
-                            <label for="last_supplied_date">Last Supplied Date</label>
+                            <label for="last_supplied_date">တင်သွင်းသည့်နေ့</label>
 
                             <input type="date" name="last_supplied_date" id="last_supplied_date" class="form-control" value="{{$supplier_product->last_supplied_date}}">
                         </div>
 
-                        <button type="submit" class="btn btn-md btn-success mt-2 w-100">Update</button>
+                        <button type="submit" class="btn btn-md btn-success mt-2 w-100" style=" font-size: 16px">ပြင်ဆင်မည်</button>
                     </form>
                 </div>
             </div>

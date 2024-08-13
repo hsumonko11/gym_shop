@@ -2,18 +2,19 @@
 
 @section('product-active','active')
 
-@section('content')
+@section('content')  ကုန်ပစ္စည်းများ ကုန်ပစ္စည်းစုစု‌ပေါင်း ကုန်ပစ္စည်းအမည် အမျိုးအစား ဈေးနှုန်း အရေအတွက် အသစ်ထည့်မည် ပြင်ဆင်မည် ပယ်ဖျက်မည်
+ဖော်ပြချက်
 <div class="container">
     <div class="page-inner">
         <div class="row">
             <div class="col-sm-4">
-                <h3 class="fw-bold mb-3">Product</h3>
-                <h6 class="op-7 mb-2">Total - {{$products->total()}}</h6>
+                <h3 class="fw-bold mb-3">ကုန်ပစ္စည်းများ</h3>
+                <h6 class="op-7 mb-2">ကုန်ပစ္စည်းစုစု‌ပေါင်း - {{$products->total()}}</h6>
             </div>
 
             <div class="col-sm-4 offset-sm-4">
                <div class="float-end">
-                    <a href="{{route('admin.products.create')}}"><button type="button" class="btn btn-md btn-info mb-2">Create</button></a>
+                    <a href="{{route('admin.products.create')}}"><button type="button" class="btn btn-md btn-info mb-2">အသစ်ထည့်မည်</button></a>
                </div>
                 <form action="{{route('admin.products.index')}}" method="GET">
                     @csrf
@@ -36,10 +37,10 @@
                 <table class="table table-striped table-hover">
                     <thead class="thead-dark">
                         <tr>
-                            <th>Name</th>
-                            <th>Category</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
+                            <th>ကုန်ပစ္စည်းအမည်</th>
+                            <th>အမျိုးအစား</th>
+                            <th>ဈေးနှုန်း</th>
+                            <th>အရေအတွက်</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -60,7 +61,7 @@
                                         @csrf
                                         @method('DELETE')
 
-                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-sm btn-danger">ပယ်ဖျက်မည်</button>
                                     </form>
                                 </td>
                             </tr>

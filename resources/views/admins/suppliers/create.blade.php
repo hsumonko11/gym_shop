@@ -64,7 +64,7 @@
                         </div>
 
 
-                        <button type="submit" class="btn btn-md btn-success mt-2 w-100">အတည်ပြုမည်</button>
+                        <button type="submit" class="btn btn-md btn-success mt-2 w-100"style=" font-size: 16px">အတည်ပြုမည်</button>
                     </form>
                 </div>
             </div>

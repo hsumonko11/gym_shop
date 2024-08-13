@@ -34,7 +34,7 @@
               aria-expanded="false"
             >
             <i class="fas fa-home"></i>
-              <p>Dashboard</p>
+              <p>ပင်မစာမျက်နှာ</p>
               {{-- <span class="caret"></span> --}}
             </a>
             {{-- <div class="collapse" id="dashboard">
@@ -50,7 +50,7 @@
           <li class="nav-item @yield('customer-active')">
             <a href="{{route('admin.customers.index')}}">
               <i class="fas fa-users"></i>
-              <p>Customers</p>
+              <p>ဈေးဝယ်သူများ</p>
 
             </a>
 
@@ -59,7 +59,7 @@
           <li class="nav-item @yield('product-active')">
             <a href="{{route('admin.products.index')}}">
               <i class="fas fa-layer-group"></i>
-              <p>Product</p>
+              <p>ကုန်ပစ္စည်းများ </p>
 
             </a>
 
@@ -68,7 +68,7 @@
           <li class="nav-item @yield('category-active')">
             <a href="{{route('admin.categories.index')}}">
                 <i class="fas fa-box"></i>
-              <p>Category</p>
+              <p>အမျိုးအစားများ </p>
 
             </a>
 
@@ -77,7 +77,7 @@
           <li class="nav-item @yield('supplier-active')">
             <a href="{{route('admin.suppliers.index')}}">
                 <i class="fas fa-user-alt"></i>
-              <p>Supplier</p>
+              <p>တင်သွင်းသူများ </p>
 
             </a>
 
@@ -86,7 +86,7 @@
           <li class="nav-item @yield('supplier-product-active')">
             <a href="{{route('admin.supplier_products.index')}}">
                 <i class="fas fa-boxes"></i>
-              <p>Supplier Products</p>
+              <p>တင်သွင်းသောကုန်ပစ္စည်းများ</p>
 
             </a>
 
@@ -95,7 +95,7 @@
           <li class="nav-item @yield('order-active')">
             <a href="{{route('admin.orders.index')}}">
                 <i class="fas fa-chart-bar"></i>
-              <p>Order</p>
+              <p>မှာယူမှုများ</p>
 
             </a>
 
@@ -113,23 +113,12 @@
           {{--
 
 
-
-
-
-
-
-
-
-
-
-
-
           --}}
 
           <li class="nav-item @yield('contact-active')">
             <a href="{{route('admin.contact')}}">
                 <i class="fas fa-eye"></i>
-              <p>Contact Us</p>
+              <p>အကြောင်းကြားစား</p>
 
             </a>
 

@@ -7,7 +7,7 @@
     <div class="page-inner">
         <div class="row">
             <div class="col-sm-4">
-                <h3 class="fw-bold mb-3">Create Product</h3>
+                <h3 class="fw-bold mb-3">ကုန်ပစ္စည်း အသစ်ထည့်ခြင်း</h3>
                 <h6 class="op-7 mb-2"></h6>
             </div>
 
@@ -23,14 +23,15 @@
             @include('admins.layouts.flash_message')
             <div class="card">
                 {{-- <div class="card-header">
-                    Create
+                    Create  ကုန်ပစ္စည်းများ ကုန်ပစ္စည်းစုစု‌ပေါင်း ကုန်ပစ္စည်းအမည် အမျိုးအစား ဈေးနှုန်း အရေအတွက် အသစ်ထည့်မည် ပြင်ဆင်မည် ပယ်ဖျက်မည်
+ဖော်ပြချက်
                 </div> --}}
                 <div class="card-body">
                     <form action="{{route('admin.products.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <div>
-                            <label for="name">Name</label>
+                            <label for="name">ကုန်ပစ္စည်းအမည်</label>
 
                             <input type="text" name="name" id="name" class="form-control">
 
@@ -40,7 +41,7 @@
                         </div>
 
                         <div class="mt-2">
-                            <label for="category">Category</label>
+                            <label for="category">အမျိုးအစား</label>
 
                             <select name="category_id" id="category_id" class="form-control">
                                     <option>Select Category...</option>
@@ -51,19 +52,19 @@
                         </div>
 
                         <div class="mt-2">
-                            <label for="price">Price</label>
+                            <label for="price">ဈေးနှုန်း</label>
 
                             <input type="number" name="price" id="price" step="any" class="form-control">
                         </div>
 
                         <div class="mt-2">
-                            <label for="description">Description</label>
+                            <label for="description">ဖော်ပြချက်</label>
 
                             <textarea name="description" id="description" cols="30" rows="1" class="form-control"></textarea>
                         </div>
 
                         <div class="mt-2">
-                            <label for="image">Image</label>
+                            <label for="image">ကုန်ပစ္စည်းဓာတ်ပုံ </label>
 
                             <input type="file" name="image" id="image" class="form-control">
                         </div>
@@ -72,7 +73,7 @@
 
                         </div>
 
-                        <button type="submit" class="btn btn-md btn-success mt-2 w-100">Submit</button>
+                        <button type="submit" class="btn btn-md btn-success mt-2 w-100" style=" font-size: 16px">အတည်ပြုမည်</button>
                     </form>
                 </div>
             </div>

@@ -31,7 +31,7 @@
                         @method('PUT')
 
                         <div class="form-group">
-                            <label for="">Name</label>
+                            <label for="">အမည်</label>
 
                             <input type="text" name="username" class="form-control" placeholder="Enter customer name..." required value="{{$customer->username}}">
 
@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="">Phone</label>
+                            <label for="">ဖုန်း</label>
 
                             <input type="text" name="phone" class="form-control" value="{{$customer->phone}}" placeholder="Enter phone no..." required>
 
@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="">Address</label>
+                            <label for="">လိပ်စာ</label>
 
                             <textarea name="address" id="address" cols="30" rows="1" class="form-control" placeholder="Ender address..." required>{{$customer->address}}</textarea>
 
@@ -60,7 +60,7 @@
                             @enderror
                         </div>
 
-                        <button type="submit" class="btn btn-md btn-success w-100">Update</button>
+                        <button type="submit" class="btn btn-md btn-success w-100" style="font-size: 16px">ပြင်ဆင်မည်</button>
                     </form>
                 </div>
             </div>

@@ -7,8 +7,9 @@
     <div class="page-inner">
         <div class="row">
             <div class="col-sm-4">
-                <h3 class="fw-bold mb-3">Customers</h3>
-                <h6 class="op-7 mb-2">Total - {{$customers->total()}}</h6>
+                <h3 class="fw-bold mb-3">ဈေးဝယ်သူများ
+                </h3>
+                <h6 class="op-7 mb-2"style="font-size: 20px">ဈေးဝယ်သူ စုစုပေါင်း- {{$customers->total()}}</h6>
             </div>
 
             <div class="col-sm-4 offset-sm-4">
@@ -36,10 +37,10 @@
                 <table class="table table-striped table-hover">
                     <thead class="thead-dark">
                         <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Address</th>
+                            <th>အမည်</th>
+                            <th>အီးမေးလ်</th>
+                            <th>ဖုန်း</th>
+                            <th>လိပ်စာ</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -53,13 +54,13 @@
                                 <td>{{$customer->address}}</td>
                                 <td class="d-flex justify-content-start">
 
-                                    <a href="{{route('admin.customers.edit',$customer->id)}}"><button type="button" class="btn btn-sm btn-warning" style="margin-right:2px;">Edit</button></a>
+                                    <a href="{{route('admin.customers.edit',$customer->id)}}"><button type="button" class="btn btn-sm btn-warning" style="margin-right:2px;">ပြင်ဆင်မည်</button></a>
 
                                     <form action="{{route('admin.customers.destroy',$customer->id)}}" method="POST">
                                         @csrf
                                         @method('DELETE')
 
-                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-sm btn-danger">ပယ်ဖျက်မည်</button>
                                     </form>
                                 </td>
                             </tr>

@@ -7,8 +7,8 @@
     <div class="page-inner">
         <div class="row">
             <div class="col-sm-4">
-                <h3 class="fw-bold mb-3">Category</h3>
-                <h6 class="op-7 mb-2">Total - {{$categories->total()}}</h6>
+                <h3 class="fw-bold mb-3">ကုန်ပစ္စည်းအမျိုးအစားများ</h3>
+                <h6 class="op-7 mb-2" style="font-size: 20px">အမျိုးအစားစုစုပေါင်း - {{$categories->total()}}</h6>
             </div>
 
             <div class="col-sm-4">
@@ -53,7 +53,7 @@
                                         @csrf
                                         @method('DELETE')
 
-                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-sm btn-danger">Delete </button>
                                     </form>
                                 </td>
                             </tr>

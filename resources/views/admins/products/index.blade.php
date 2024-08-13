@@ -2,14 +2,13 @@
 
 @section('product-active','active')
 
-@section('content')  ကုန်ပစ္စည်းများ ကုန်ပစ္စည်းစုစု‌ပေါင်း ကုန်ပစ္စည်းအမည် အမျိုးအစား ဈေးနှုန်း အရေအတွက် အသစ်ထည့်မည် ပြင်ဆင်မည် ပယ်ဖျက်မည်
-ဖော်ပြချက်
+@section('content')
 <div class="container">
     <div class="page-inner">
         <div class="row">
             <div class="col-sm-4">
                 <h3 class="fw-bold mb-3">ကုန်ပစ္စည်းများ</h3>
-                <h6 class="op-7 mb-2">ကုန်ပစ္စည်းစုစု‌ပေါင်း - {{$products->total()}}</h6>
+                <h6 class="op-7 mb-2" style=" font-size: 20px">ကုန်ပစ္စည်းစုစု‌ပေါင်း - {{$products->total()}}</h6>
             </div>
 
             <div class="col-sm-4 offset-sm-4">
@@ -53,9 +52,9 @@
                                 <td>{{$product->price}}</td>
                                 <td>{{$product->quantity}}</td>
                                 <td>
-                                    <a href="{{route('admin.products.show',$product->id)}}"><button type="button" class="btn btn-sm btn-info" style="float: left;margin-right: 2px;">Detail</button></a>
+                                    <a href="{{route('admin.products.show',$product->id)}}"><button type="button" class="btn btn-sm btn-info" style="float: left;margin-right: 2px;">အသေးစိတ်</button></a>
 
-                                    <a href="{{route('admin.products.edit',$product->id)}}"><button type="button" class="btn btn-sm btn-warning" style="float: left;margin-right: 2px;">Edit</button></a>
+                                    <a href="{{route('admin.products.edit',$product->id)}}"><button type="button" class="btn btn-sm btn-warning" style="float: left;margin-right: 2px;">ပြင်ဆင်မည်</button></a>
 
                                     <form action="{{route('admin.products.destroy',$product->id)}}" method="POST">
                                         @csrf

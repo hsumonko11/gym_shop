@@ -7,7 +7,7 @@
     <div class="page-inner">
         <div class="row">
             <div class="col-sm-4">
-                <h3 class="fw-bold mb-3">Profile</h3>
+                <h3 class="fw-bold mb-3"> စီမံခန့်ခွဲသူ</h3>
                 <h6 class="op-7 mb-2"></h6>
             </div>
 
@@ -24,14 +24,14 @@
 
                         <div>
                             <img src="{{asset('assets/img/profile.png')}}" style="width:100px;height:100px;" alt="">
-                        </div>
+                        </div><br>
 
                         <div>
 
-                            <span class="d-inline-block"><b>Name</b> </span> : {{auth()->user()->name}}
-                        </div>
+                            <span class="d-inline-block"><b>အမည်</b> </span> : {{auth()->user()->name}}
+                        </div><br>
                         <div>
-                            <span class="d-inline-block"><b>Email</b> </span> : {{auth()->user()->email}}
+                            <span class="d-inline-block"><b>အီးမေးလ်</b> </span> : {{auth()->user()->email}}
                         </div>
 
 
@@ -41,9 +41,9 @@
 
             <div class="col-sm-6" style="line-height: 50px;">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header" style="font-size: 20px">
                         @include('admins.layouts.flash_message')
-                        Edit Profile
+                        ကိုယ်ရေးမှတ်တမ်း ပြောင်းလဲမည် ?
                     </div>
                     <div class="card-body">
                         <form action="{{route('admin.update_profile',$user->id)}}" method="POST">
@@ -51,17 +51,17 @@
                             @method('PUT')
 
                             <div class="form-group">
-                                <label for="">Name</label>
+                                <label for="">အမည်</label>
                                 <input type="text" name="name" class="form-control" value="{{auth()->user()->name}}" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="">Email</label>
+                                <label for="">အီးမေးလ်</label>
                                 <input type="email" name="email" class="form-control" value="{{auth()->user()->email}}" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="">Password</label>
+                                <label for="">စကားဝှက်</label>
                                 <input type="password" name="password" class="form-control" required>
 
                                 @error("password")
@@ -69,7 +69,7 @@
                                 @enderror
                             </div>
 
-                            <button type="submit" class="btn btn-md btn-success w-100">Change</button>
+                            <button type="submit" class="btn btn-md btn-success w-100">အတည်ပြုမည်</button>
                         </form>
                     </div>
                 </div>

@@ -118,7 +118,7 @@
           <li class="nav-item @yield('contact-active')">
             <a href="{{route('admin.contact')}}">
                 <i class="fas fa-eye"></i>
-              <p>အကြောင်းကြားစား</p>
+              <p>အကြံပြုစာများ</p>
 
             </a>
 

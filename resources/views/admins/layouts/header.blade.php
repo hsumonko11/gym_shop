@@ -359,13 +359,13 @@
                 </li>
                 <li>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="{{route('admin.profile')}}">My Profile</a>
+                  <a class="dropdown-item" href="{{route('admin.profile')}}">စီမံခန့်ခွဲသူ၏ကိုယ်ရေးမှတ်တမ်း</a>
 
                   <div class="dropdown-divider"></div>
                   <form action="{{route('logout')}}" method="POST">
                       @csrf
 
-                      <button type="submit" class="btn btn-sm btn-default"><b>Logout</b></button>
+                      <button type="submit" class="btn btn-sm btn-default"><b>အကောင့်မှထွက်ရန်</b></button>
                   </form>
                 </li>
               </div>

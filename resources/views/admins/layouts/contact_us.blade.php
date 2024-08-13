@@ -7,13 +7,17 @@
     <div class="page-inner">
         <div class="row">
             <div class="col-sm-4">
-                <h3 class="fw-bold mb-3">Contact Us</h3>
-                <h6 class="op-7 mb-2">Total - {{$contacts->total()}}</h6>
+                <h3 class="fw-bold mb-3">ဝေဖန်အကြံပြုစာများ </h3>
+                <h6 class="op-7 mb-2" style="font-size: 20px"> အကြံပြုစာ စုစုပေါင်း - {{$contacts->total()}}</h6>
             </div>
 
             <div class="col-sm-4 offset-sm-4">
                <div class="float-end">
-                    {{-- <a href="{{route('admin.customers.create')}}"><button type="button" class="btn btn-md btn-info mb-2">Create</button></a> --}}
+                    {{-- အကြံပြုစာများ
+အီးမေးလ်
+အကြောင်းအရာ
+အကြံပြုစာ စုစုပေါင်း
+ဝေဖန်အကြံပြုစာများ <a href="{{route('admin.customers.create')}}"><button type="button" class="btn btn-md btn-info mb-2">Create</button></a> --}}
                </div>
                 <form action="{{route('admin.contact')}}" method="GET">
                     @csrf
@@ -36,8 +40,8 @@
                 <table class="table table-striped table-hover">
                     <thead class="thead-dark">
                         <tr>
-                            <th>Email</th>
-                            <th>Note</th>
+                            <th>အီးမေးလ်</th>
+                            <th>အကြောင်းအရာ</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -52,7 +56,7 @@
                                         @csrf
                                         @method('DELETE')
 
-                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-sm btn-danger">ပယ်ဖျက်မည်</button>
                                     </form>
                                 </td>
                             </tr>

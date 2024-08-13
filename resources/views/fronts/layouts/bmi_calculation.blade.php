@@ -9,6 +9,8 @@
         <div class="d-flex justify-content-center my-5">
             <div class="col-sm-6 mt-5">
                 <div class="card mt-3">
+                    <div class="card-header"  style="font-size: 20px" >မိမိရဲ့ BMI ကို တွက်ကြည့်ရအောင် !
+                    </div>
                     <div class="card-body">
                         <div class="mt-4">
                             <label for="">Weight (lb)</label>
@@ -79,16 +81,16 @@
 
                 if(bmi < 18.5){
                     $('#normal').text("");
-                    $('#underweight').text("You are underweight.");
+                    $('#underweight').text("ရှိသင့်သောကိုယ်အလေးချိန်အောက် လျော့နည်းနေပါတယ်");
                 }else if(bmi >= 18.5 && bmi < 24.9){
                     $('#underweight').text("");
-                    $('#normal').text("You are normal.");
+                    $('#normal').text("ပုံမှန်ကိုယ်အလေးချိန်ရှိသူဖြစ်ပါတယ်");
                 }else if(bmi >= 25 && bmi < 29.9){
                     $('#normal').text("");
-                    $('#underweight').text("You are overweight.");
+                    $('#underweight').text("ရှိသင့်သော ကိုယ်အလေးချိန်ထက် များနေပါတယ်");
                 }else{
                     $('#normal').text("");
-                    $('#underweight').text("You are obese.");
+                    $('#underweight').text("ရှိသင့်သည်ထက်ပို၍ဝနေသောသူဖြစ်ပါတယ်");
                 }
 
 

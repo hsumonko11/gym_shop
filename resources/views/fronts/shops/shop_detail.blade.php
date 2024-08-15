@@ -37,10 +37,10 @@
 
                 {{-- @include('admins.layouts.flash_message') --}}
 
-            <form action="{{route('cart')}}" method="POST">
+            <form action="{{route('cart')}}" method="POST" style="font-size: 18px">
                 @csrf
 
-                <h4><b>{{$product->name}}</b></h4>
+                <h4><b >{{$product->name}}</b></h4>
 
                 <h5 class="mt-3"><i class="fa fa-gg mr-2" aria-hidden="true"></i>ကုန်ပစ္စည်းအမျိုးအစား - {{$product->category != null ? $product->category->name : ''}}</h5>
 

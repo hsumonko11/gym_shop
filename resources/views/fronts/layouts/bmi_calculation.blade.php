@@ -13,16 +13,16 @@
                     </div>
                     <div class="card-body">
                         <div class="mt-4">
-                            <label for="">Weight (lb)</label>
-                            <input type="number" name="weight" id="weight" class="form-control" min="0" required placeholder="အလေးချိန် ( ပေါင် ) ...">
+                            <label for="" style="font-size: 18px">Weight (lb)</label>
+                            <input type="number" name="weight" style="font-size: 18px" id="weight" class="form-control" min="0" required placeholder="အလေးချိန် ( ပေါင် ) ...">
                         </div>
                         <div class="mt-4">
-                            <label for="">Height (inch)</label>
-                            <input type="number" name="height" id="height" class="form-control" min="0" required placeholder="အရပ် ( လက်မ )...">
+                            <label for="" style="font-size: 18px">Height (inch)</label>
+                            <input type="number" name="height" style="font-size: 18px" id="height" class="form-control" min="0" required placeholder="အရပ် ( လက်မ )...">
                         </div>
 
                         <div class="mt-4">
-                            <button type="button" class="btn btn-md btn-primary calculate w-100">တွက်ချက်မည်</button>
+                            <button type="button" class="btn btn-md btn-primary calculate w-100" style="font-size: 18px">တွက်ချက်မည်</button>
                         </div>
                     </div>
 
@@ -87,7 +87,7 @@
                     $('#normal').text("ပုံမှန်ကိုယ်အလေးချိန်ရှိသူဖြစ်ပါတယ်");
                 }else if(bmi >= 25 && bmi < 29.9){
                     $('#normal').text("");
-                    $('#underweight').text("ရှိသင့်သော ကိုယ်အလေးချိန်ထက် များနေပါတယ်");
+                    $('#underweight').text("ရှိသင့်သောကိုယ်အလေးချိန်ထက် များနေပါတယ်");
                 }else{
                     $('#normal').text("");
                     $('#underweight').text("ရှိသင့်သည်ထက်ပို၍ဝနေသောသူဖြစ်ပါတယ်");

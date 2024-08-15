@@ -25,15 +25,15 @@
                     </h4>
 
                     <div class="bor8 m-b-20 how-pos4-parent">
-                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="သင့်အား ဆက်သွယ်လိုသော အီးမေးလ်ကိုသာ ထည့်သွင်းပေးပါရှင်">
+                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" style="font-size: 15px" type="text" name="email" placeholder="သင့်အား ဆက်သွယ်လိုသော အီးမေးလ်ကိုသာ ထည့်သွင်းပေးပါရှင်">
                         <img class="how-pos4 pointer-none" src="{{asset('fronts/images/icons/icon-email.png')}}" alt="ICON">
                     </div>
 
                     <div class="bor8 m-b-30">
-                        <textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="note" placeholder="အကြောင်းအရာ . . .?"></textarea>
+                        <textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" style="font-size: 18px" name="note" placeholder="အကြောင်းအရာ . . .?"></textarea>
                     </div>
 
-                    <button type="submit" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+                    <button type="submit" style="font-size: 18px" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
                         ပေးပို့ရန်
                     </button>
                 </form>
@@ -45,12 +45,12 @@
                         <span class="lnr lnr-map-marker"></span>
                     </span>
 
-                    <div class="size-212 p-t-2">
-                        <span class="mtext-110 cl2">
+                    <div class="size-212 p-t-2" style="font-size: 18px">
+                        <span class="mtext-110 cl2" style="font-size: 18px">
                             ဆိုင်လိပ်စာ
                         </span>
 
-                        <p class="stext-115 cl6 size-213 p-t-18">
+                        <p class="stext-115 cl6 size-213 p-t-18" style="font-size: 18px">
                             Gym Accessories Shop <br>
                             အမှတ်(112) ၊ ဦးရွှေဒွေးလမ်း<br>
                             ရုံးကြီးရပ်ကွက်၊ ဟင်္သာတမြို့နယ်
@@ -59,7 +59,7 @@
                     </div>
                 </div>
 
-                <div class="flex-w w-full p-b-42">
+                <div class="flex-w w-full p-b-42" style="font-size: 18px">
                     <span class="fs-18 cl5 txt-center size-211">
                         <span class="lnr lnr-phone-handset"></span>
                     </span>
@@ -80,8 +80,8 @@
                         <span class="lnr lnr-envelope"></span>
                     </span>
 
-                    <div class="size-212 p-t-2">
-                        <span class="mtext-110 cl2">
+                    <div class="size-212 p-t-2" style="font-size: 18px">
+                        <span class="mtext-110 cl2" >
                             အီးမေးလ်
                         </span>
 

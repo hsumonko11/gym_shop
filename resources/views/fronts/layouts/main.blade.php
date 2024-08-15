@@ -66,11 +66,11 @@
 						</a>
 
                         @else
-						<a href="{{route('customer_login_page')}}" class="flex-c-m trans-04 p-lr-25" target="_blank">
+						<a href="{{route('customer_login_page')}}" class="flex-c-m trans-04 p-lr-25" target="_blank" style="font-size: 18px">
 							အကောင့်ထဲသို့ဝင်ရောက်မည်
 						</a>
 
-						<a href="{{route('customer_register_page')}}" class="flex-c-m trans-04 p-lr-25" target="_blank">
+						<a href="{{route('customer_register_page')}}" class="flex-c-m trans-04 p-lr-25" target="_blank" style="font-size: 18px">
 							စာရင်းသွင်းမည်
 						</a>
                         @endauth
@@ -280,28 +280,28 @@
 
 					</div>
 
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
+				<div class="col-sm-6 col-lg-3 p-b-50" >
+					<h4 class="stext-301 cl0 p-b-30" style="font-size: 20px">
 						အခက်အခဲတစ်စုံတစ်ရာရှိပါက
 					</h4>
 
 					<ul>
 
                         <li class="p-b-10">
-							<a href="{{route('about')}}" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="{{route('about')}}" class="stext-107 cl7 hov-cl1 trans-04" style="font-size: 18px">
                                 ဝဘ်ဆိုက်အကြောင်း အသေးစိတ်ဖတ်ရှုရန်
                         </a>
 						</li>
 
 
 						<li class="p-b-10">
-							<a href="{{route('blog')}}" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="{{route('blog')}}" class="stext-107 cl7 hov-cl1 trans-04" style="font-size: 18px">
                                 ဝဘ်ဆိုက်အသုံးပြုပုံ
                         </a>
 						</li>
 
 						<li class="p-b-10">
-							<a href="{{route('contact')}}" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="{{route('contact')}}" class="stext-107 cl7 hov-cl1 trans-04" style="font-size: 18px">
 
                             Admin teamနှင့် ဆက်သွယ်ရန်
 							</a>
@@ -311,17 +311,14 @@
 				</div>
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
+					<h4 class="stext-301 cl0 p-b-30" style="font-size: 18px">
 						ဆိုင်လိပ်စာ
 					</h4>
-
-					<p class="stext-107 cl7 size-201">
-
+					<p class="stext-107 cl7 size-201" style="font-size: 18px">
                         အမှတ်(112) ၊ ဦးရွှေဒွေးလမ်း<br>
                         ရုံးကြီးရပ်ကွက်၊ ဟင်္သာတမြို့နယ်<br>
                         +959 785 966 572
                     </p>
-
 					{{-- <div class="p-t-27">
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
 							<i class="fa fa-facebook"></i>
@@ -364,7 +361,7 @@
 
 				<p class="stext-107 cl6 txt-center">
 
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> GymAccessooriesShop
 
 				</p>
 			</div>

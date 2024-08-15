@@ -283,10 +283,10 @@
                         </div>
 
                         <div class="card-footer block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                
+                            <div class="block2-txt-child1 flex-col-l " style="font-size: 18px">
+
                                     {{$product->name}}
-                                
+
 
                                 <span class="stext-105 cl3">
                                     {{$product->price}} MMK
@@ -296,16 +296,16 @@
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 @if($product->quantity > 0)
                                 <a href="{{route('shop_detail',$product->id)}}">
-                                    <button type="button" class="btn btn-sm btn-primary">အသေးစိတ်</button>    
+                                    <button type="button" class="btn btn-sm btn-primary">အသေးစိတ်</button>
                                 </a>
 
                                 @elseif($product->quantity <= 0 )
-                               
-                                    <button type="button" style="cursor:default;" class="btn btn-sm btn-danger" disabled>Out of Stock</button>    
-                                    
+
+                                    <button type="button" style="cursor:default;" class="btn btn-sm btn-danger" disabled>Out of Stock</button>
+
                             @endif
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>

@@ -445,12 +445,12 @@
 						<div class="block2-pic hov-img0">
 							<img src="{{asset('storage/products/'.$product->image)}}" alt="IMG-PRODUCT" style="width:270px;height:300px;">
 
-							<a href="{{route('shop_detail',$product->id)}}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
+							<a href="{{route('shop_detail',$product->id)}}" style="font-size: 18px" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
 								အသေးစိတ်
 							</a>
 						</div>
 
-                        <div class="d-flex justify-content-between p-3 home-product">
+                        <div class="d-flex justify-content-between p-3 home-product" style="font-size: 20px">
                             <div>
                                 {{$product->name}}
                             </div>

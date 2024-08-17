@@ -132,8 +132,8 @@
                                         </td>
                                         <td class="column-2">{{$cart->product->name}}</td>
                                         <td class="column-3 price">{{$cart->product->price}} MMK</td>
-                                        <td class="column-4 quantity">{{$cart->quantity}}</td>
-                                            {{-- <div class="wrap-num-product flex-w m-l-auto m-r-0">
+                                        <td class="column-4 quantity">
+                                            <div class="wrap-num-product flex-w m-l-auto m-r-0">
                                                 <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m quantity-sign">
                                                     <i class="fs-16 zmdi zmdi-minus"></i>
                                                 </div>
@@ -146,7 +146,7 @@
 
 
                                             </div>
-                                        </td> --}}
+                                        </td>
                                         <td class="column-5 total">{{$cart->product->price * $cart->quantity}}</td>
                                         <td>
                                             <button type="button" class="btn btn-md btn-outline-danger remove-cart" data-route="{{route('remove_cart',$cart->id)}}"><i class="fa fa-trash"></i></button>

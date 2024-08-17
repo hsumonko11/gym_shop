@@ -104,7 +104,12 @@
 	</div>
 
 
-	<!-- Shoping Cart -->
+	<!-- Shoping Cart ဈေးခြင်းတောင်း
+ကုန်ပစ္စည်း ဈေးနှုန်း အရေအတွက် ကျသင့်ငွေ လုပ်ဆောင်ချက်။ စုစုပေါင်းကျသင့်ငွေ
+အချက်အလက်များကို ပြည့်စုံစွာ ဖြည့်ပေးပါရှင့်
+ဘောက်ချာနံပါတ် အမည် ဖုန်း နေရပ်လိပ်စာ(အိမ်အမှတ် ၊ လမ်းအမည် ၊မြို့နယ် )
+ငွေပေးချေပြီးနောက် ပြေစာကိုထည့်သွင်းပေးပါ
+အတည်ပြုမည်-->
 	<form class="bg0 p-t-25 p-b-85">
 		<div class="container">
 			<div class="row">
@@ -114,12 +119,12 @@
 							<table class="table-shopping-cart">
 								<thead>
                                     <tr class="table_head">
-                                        <th class="column-1">Product</th>
-                                        <th class="column-2"></th>
-                                        <th class="column-3">Price</th>
-                                        <th class="column-4">Quantity</th>
-                                        <th class="column-5">Total</th>
-                                        <th class="p-2">Action</th>
+                                        <th class="column-1" style="font-size: 20px;">ကုန်ပစ္စည်း</th>
+                                        <th class="column-2" style="font-size: 20px;"></th>
+                                        <th class="column-3" style="font-size: 20px;">ဈေးနှုန်း</th>
+                                        <th class="column-4" style="font-size: 20px;">အရေအတွက်</th>
+                                        <th class="column-5" style="font-size: 20px;">ကျသင့်ငွေ</th>
+                                        <th class="p-2" style="font-size: 20px;">လုပ်ဆောင်ချက်</th>
                                     </tr>
                                 </thead>
 
@@ -132,8 +137,8 @@
                                         </td>
                                         <td class="column-2">{{$cart->product->name}}</td>
                                         <td class="column-3 price">{{$cart->product->price}} MMK</td>
-                                        <td class="column-4 quantity">
-                                            <div class="wrap-num-product flex-w m-l-auto m-r-0">
+                                        <td class="column-4 quantity">{{$cart->quantity}}
+                                            {{-- <div class="wrap-num-product flex-w m-l-auto m-r-0">
                                                 <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m quantity-sign">
                                                     <i class="fs-16 zmdi zmdi-minus"></i>
                                                 </div>
@@ -145,7 +150,7 @@
                                                 </div>
 
 
-                                            </div>
+                                            </div> --}}
                                         </td>
                                         <td class="column-5 total">{{$cart->product->price * $cart->quantity}}</td>
                                         <td>
@@ -168,13 +173,13 @@
 				<div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
 					<div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm card-shadow">
 						<h4 class="mtext-109 cl2 p-b-30">
-							Cart Totals
+							ဈေးခြင်းတောင်း
 						</h4>
 
 						<div class="flex-w flex-t bor12 p-b-13">
 							<div class="size-208">
-								<span class="stext-110 cl2">
-									Grand total:
+								<span class="stext-110 cl2" style="font-size: 15px;">
+									စုစုပေါင်းကျသင့်ငွေ =
 								</span>
 							</div>
 
@@ -186,8 +191,9 @@
 						</div>
 
 
-						<button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer checkout">
-							Proceed to Checkout
+
+						<button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer checkout" >
+							မှာယူမည်
 						</button>
 					</div>
 				</div>

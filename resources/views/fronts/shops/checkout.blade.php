@@ -32,11 +32,11 @@
 							<table class="table-shopping-cart">
 								<thead>
                                     <tr class="table_head">
-                                        <th class="column-1">Product</th>
+                                        <th class="column-1">ကုန်ပစ္စည်း</th>
                                         <th class="column-2"></th>
-                                        <th class="column-3">Price</th>
-                                        <th class="column-4">Quantity</th>
-                                        <th class="column-5">Total</th>
+                                        <th class="column-3">ဈေးနှုန်း</th>
+                                        <th class="column-4">အရေအတွက်</th>
+                                        <th class="column-5">ကျသင့်ငွေ</th>
                                     </tr>
                                 </thead>
 
@@ -57,7 +57,7 @@
                                     @endforeach
 
                                     <tr>
-                                        <td colspan="4" class="text-right py-3">Grand Total :</td>
+                                        <td colspan="4" class="text-right py-3">စုစုပေါင်းကျသင့်ငွေ :</td>
                                         <td class="text-center">{{$order->total_amount}} MMK</td>
                                     </tr>
                                 </tbody>
@@ -70,9 +70,9 @@
 
 				<div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
 					<div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm card-shadow">
-						<p class="text-info mb-2"><b>Please, fill the customer information.</b></p>
+						<p class="text-info mb-2"><b>အချက်အလက်များကို ပြည့်စုံစွာ ဖြည့်ပေးပါရှင့်</b></p>
 
-                        <p class="d-inline">Voucher No : </p><span class="text-primary mb-2"><b>{{$order->voucher_no}}</b></span>
+                        <p class="d-inline">ဘောက်ချာနံပါတ် : </p><span class="text-primary mb-2"><b>{{$order->voucher_no}}</b></span>
 
 						<form action="{{route('customer_information')}}" method="POST" enctype="multipart/form-data">
                             @csrf
@@ -82,7 +82,7 @@
                             <input type="hidden" name="order_id" value="{{$order->id}}">
 
                             <div class="form-group">
-                                <label for="">Name</label>
+                                <label for="">အမည်</label>
 
                                 <input type="text" name="username" class="form-control" value="{{auth()->user()->name}}" disabled>
 
@@ -92,9 +92,9 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="">Phone</label>
+                                <label for="">ဖုန်း</label>
 
-                                <input type="text" name="phone" class="form-control" placeholder="Enter phone no..." required>
+                                <input type="text" name="phone" class="form-control" placeholder="ဆက်သွယ်ရမည့် ဖုန်းနံပါတ်" required>
 
                                 @error("phone")
                                     <div class="text-danger">{{$message}}</div>
@@ -102,9 +102,9 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="">Address</label>
+                                <label for="">နေရပ်လိပ်စာ</label>
 
-                                <textarea name="address" id="address" cols="30" rows="1" class="form-control" placeholder="Ender address..." required></textarea>
+                                <textarea name="address" id="address" cols="30" rows="1" class="form-control" placeholder="အိမ်အမှတ် ၊ လမ်းအမည် ၊မြို့နယ်" required></textarea>
 
                                 @error("address")
                                     <div class="text-danger">{{$message}}</div>
@@ -114,7 +114,7 @@
                             <input type="hidden" name="payment_status" value="Paid" class="form-control">
 
 
-                            <label for="">Insert Payment Screenshot</label>
+                            <label for=""> ငွေပေးချေပြီးနောက် ပြေစာကိုထည့်သွင်းပေးပါ</label>
                             <div class="form-group row">
                                 <div class="col-sm-5">
                                     <img src="{{asset('fronts/photos/qrcode.png')}}" alt="" class="w-100 h-100">
@@ -127,7 +127,7 @@
 
                             </div>
 
-                            <button type="submit" class="btn btn-md btn-success w-100">Submit</button>
+                            <button type="submit" class="btn btn-md btn-success w-100">အတည်ပြုမည်</button>
 
                         </form>
 					</div>

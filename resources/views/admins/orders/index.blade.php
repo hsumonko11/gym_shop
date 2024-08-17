@@ -6,7 +6,7 @@
 <div class="container">
     <div class="page-inner">
         <div class="row">
-            <div class="col-sm-2">
+            <div class="col-sm-1">
                 <h3 class="fw-bold mb-3">Orders</h3>
                 <h6 class="op-7 mb-2">Total - {{$orders->total()}}</h6>
             </div>
@@ -30,10 +30,7 @@
                 </form>
             </div>
 
-            <div class="col-sm-4">
-               <div class="float-end">
-                    {{-- <a href="{{route('admin.orders.create')}}"><button type="button" class="btn btn-md btn-info mb-2">Create</button></a> --}}
-               </div>
+            <div class="col-sm-3">
                 <form action="{{route('admin.orders.index')}}" method="GET">
                     @csrf
 
@@ -44,6 +41,10 @@
                         </div>
                     </div>
                 </form>
+            </div>
+
+            <div class="col-sm-1">
+            <a href="{{ route('admin.pdfview',['download'=>'pdf']) }}"><button type="button" class="btn btn-md btn-info mb-2">Download</button></a>  
             </div>
 
         </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admins;
 
 use PDF; 
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -130,14 +131,14 @@ class ProductController extends Controller
     public function pdfview(Request $request)  
     {  
         
-            $products = Product::get();
-        view()->share('products',$products);  
+        $orders = Order::latest('id')->get();
+        view()->share('orders',$orders);  
   
         if($request->has('download')){  
-            $pdf = PDF::loadView('admins.products.pdf');  
-            return $pdf->download('products .pdf');  
+            $pdf = PDF::loadView('admins.orders.pdf');  
+            return $pdf->download('orders .pdf');  
         }  
   
-        return redirect()->route('admin.products.index');
+        return redirect()->route('admin.orders.index');
     }  
 }

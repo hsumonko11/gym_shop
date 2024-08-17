@@ -15,7 +15,7 @@
                <div class="float-end">
                     <a href="{{route('admin.products.create')}}"><button type="button" class="btn btn-md btn-info mb-2">အသစ်ထည့်မည်</button></a>
 
-                    <a href="{{ route('admin.pdfview',['download'=>'pdf']) }}"><button type="button" class="btn btn-md btn-info mb-2">Download PDF</button></a>  
+                   
                </div>
                 <form action="{{route('admin.products.index')}}" method="GET">
                     @csrf

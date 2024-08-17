@@ -154,8 +154,8 @@ class HomeController extends Controller
             "address" => "required",
         ]);
 
-        $user_id = Customer::where('user_id',$request->user_id)->first();
-        if(!$user_id){
+        // $user_id = Customer::where('user_id',$request->user_id)->first();
+        // if(!$user_id){
             $customer = new Customer;
             $customer->user_id = $request->user_id;
             $customer->order_id = $request->order_id;
@@ -163,7 +163,7 @@ class HomeController extends Controller
             $customer->phone = $request->phone;
             $customer->address = $request->address;
             $customer->save();
-        }
+        // }
 
 
         $order = Order::where('id',$request->order_id)->first();

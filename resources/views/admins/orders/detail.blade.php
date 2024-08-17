@@ -55,9 +55,13 @@
         <div class="col-sm-4">
             <div class="card">
                 <div class="card-header">
-                    <p class="m-0"  style=" font-size: 16px" ><i class="fab fa-gg"></i> ဝယ်ယူသူအမည် - {{$order->user != null ? $order->user->name : ''}}</p>
+                    <!-- <p class="m-0"  style=" font-size: 16px" ><i class="fab fa-gg"></i> ဝယ်ယူသူအမည် - {{$order->user != null ? $order->user->name : ''}}</p>
                     <p class="m-0" style=" font-size: 16px"><i class="fab fa-gg"></i> ဖုန်းနံပါတ် - {{$order->customer != null ? $order->customer->phone : ''}}</p>
-                    <p class="m-0" style=" font-size: 16px"><i class="fab fa-gg"></i> လိပ်စာ - {{$order->customer != null ? $order->customer->address : ''}}</p>
+                    <p class="m-0" style=" font-size: 16px"><i class="fab fa-gg"></i> လိပ်စာ - {{$order->customer != null ? $order->customer->address : ''}}</p> -->
+
+                    <p class="m-0"  style=" font-size: 16px" ><i class="fab fa-gg"></i> ဝယ်ယူသူအမည် - {{$customer->name}}</p>
+                    <p class="m-0" style=" font-size: 16px"><i class="fab fa-gg"></i> ဖုန်းနံပါတ် - {{$customer->phone}}</p>
+                    <p class="m-0" style=" font-size: 16px"><i class="fab fa-gg"></i> လိပ်စာ - {{$customer->address}}</p>
                     <p class="m-0" style=" font-size: 16px"><i class="fab fa-gg"></i>  ငွေပေးချေမှု - {{$order->payment_status}}
                         @if($order->payment_status == "Paid")
                         <button type="button" class="btn btn-default text-primary" style=" font-size: 16px" data-bs-toggle="modal" data-bs-target="#exampleModal">

@@ -21,6 +21,19 @@ class OrderController extends Controller
             $orders = Order::whereDate('created_at',$date)
                                     ->latest('id')
                                     ->paginate(10);
+        }elseif($request->from && $request->to){
+            $from = $request->from;
+            $to = $request->to;
+            if($from == $to){
+                $orders = Order::whereDate('created_at',$from)
+                                    ->latest('id')
+                                    ->paginate(10);
+            }else{
+                $orders = Order::whereBetween('created_at', [$from, $to])
+                            ->latest('id')
+                            ->paginate(10);
+            }
+            
         }else{
             $orders = Order::latest('id')->paginate(10);
         }
@@ -77,7 +90,7 @@ class OrderController extends Controller
             $order->status = $request->status;
             $order->save();
 
-            return redirect()->route('admin.orders.index')->with('success','ကုန်ပစ္စည်းအခြေအနေ ပြောင်းလဲလိုက်သည်');
+            return redirect()->route('admin.orders.index')->with('success','Changing status is successful.');
     }
 
     /**

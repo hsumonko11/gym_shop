@@ -14,6 +14,8 @@
             <div class="col-sm-4 offset-sm-4">
                <div class="float-end">
                     <a href="{{route('admin.products.create')}}"><button type="button" class="btn btn-md btn-info mb-2">အသစ်ထည့်မည်</button></a>
+
+                    <a href="{{ route('admin.pdfview',['download'=>'pdf']) }}"><button type="button" class="btn btn-md btn-info mb-2">Download PDF</button></a>  
                </div>
                 <form action="{{route('admin.products.index')}}" method="GET">
                     @csrf
@@ -46,7 +48,11 @@
 
                     <tbody>
                         @foreach($products as $product)
-                            <tr>
+                            <tr class="@if($product->quantity <= 0 && $product->quantity < 10)
+                                        table-danger
+                                        @elseif($product->quantity < 20 && $product->quantity >= 10)
+                                        table-warning
+                                        @endif">
                                 <td>{{$product->name}}</td>
                                 <td>{{$product->category != null ? $product->category->name : ''}}</td>
                                 <td>{{$product->price}}</td>

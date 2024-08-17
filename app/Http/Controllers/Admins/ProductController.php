@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admins;
 
+use PDF; 
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -125,4 +126,18 @@ class ProductController extends Controller
 
         return back()->with('success','ပယ်ဖျက်ခြင်း အောင်မြင်ပါသည်');
     }
+
+    public function pdfview(Request $request)  
+    {  
+        
+            $products = Product::get();
+        view()->share('products',$products);  
+  
+        if($request->has('download')){  
+            $pdf = PDF::loadView('admins.products.pdf');  
+            return $pdf->download('products .pdf');  
+        }  
+  
+        return redirect()->route('admin.products.index');
+    }  
 }

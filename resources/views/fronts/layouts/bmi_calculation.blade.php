@@ -9,15 +9,30 @@
         <div class="d-flex justify-content-center my-5">
             <div class="col-sm-6 mt-5">
                 <div class="card mt-3">
-                    <div class="card-header"  style="font-size: 20px" >မိမိရဲ့ BMI ကို တွက်ကြည့်ရအောင် !
+                    <div class="card-header" style="background-color: #add8e6; padding: 10px; border-radius: 10px 10px 0 0;">
+                        <h2 style="font-size: 22px; margin: 0; color: #333;">BMI (Body Mass Index)</h2>
+                    </div>
+                    <div class="card-body" style="padding: 15px;">
+                        <p style="font-size: 18px; color: #333;">
+                            <strong>BMI (Body Mass Index) ဆိုတာ ကိုယ်ခန္ဓာ ထုထည် ညွှန်းကိန်း ဖြစ်ပါတယ်။</strong><br>
+                            <strong>အရွယ်ရောက်ပြီးလူတစ်ဦးရဲ့ ကိုယ်အလေးချိန်နှင့် အရပ်အမြင့်ပေါ်မူတည်ပြီး ခန္ဓာကိုယ်ထုထည်ပမာဏ ကို တွက်ချက်တာပါ BMI တန်ဖိုး</strong>
+                        </p>
+                        <ul style="font-size: 18px; color: #333; line-height: 1.6;">
+                            <li><strong>၁၈.၅ အောက်</strong> - ပိန်သော ကိုယ်အလေးချိန် (Underweight)</li>
+                            <li><strong>၁၈.၅ နှင့် ၂၄.၉ ကြား</strong> - ပုံမှန်ကိုယ်အလေးချိန် (Normal weight)</li>
+                            <li><strong>၂၅ နှင့် ၂၉.၉ ကြား</strong> - ပုံမှန်ထက် ပိုနေသော ကိုယ်အလေးချိန် (Overweight)</li>
+                            <li><strong>၃၀ နှင့် အထက်</strong> - အဝလွန်နေသော ကိုယ်အလေးချိန် (Obesity)</li>
+                        </ul>
                     </div>
                     <div class="card-body">
+                        <p style="font-size: 18px; color: blue; font-weight: bold;">မိမိရဲ့ BMI ကို တွက်ကြည့်ရအောင် !</p>
+
                         <div class="mt-4">
-                            <label for="" style="font-size: 18px">Weight (lb)</label>
+                            {{-- <label for="" style="font-size: 18px">Weight (lb)</label> --}}
                             <input type="number" name="weight" style="font-size: 18px" id="weight" class="form-control" min="0" required placeholder="အလေးချိန် ( ပေါင် ) ...">
                         </div>
                         <div class="mt-4">
-                            <label for="" style="font-size: 18px">Height (inch)</label>
+                            {{-- <label for="" style="font-size: 18px">Height (inch)</label> --}}
                             <input type="number" name="height" style="font-size: 18px" id="height" class="form-control" min="0" required placeholder="အရပ် ( လက်မ )...">
                         </div>
 
@@ -81,16 +96,16 @@
 
                 if(bmi < 18.5){
                     $('#normal').text("");
-                    $('#underweight').text("ရှိသင့်သောကိုယ်အလေးချိန်အောက် လျော့နည်းနေပါတယ်");
+                    $('#underweight').text("ပိန်သော ကိုယ်အလေးချိန်");
                 }else if(bmi >= 18.5 && bmi < 24.9){
                     $('#underweight').text("");
-                    $('#normal').text("ပုံမှန်ကိုယ်အလေးချိန်ရှိသူဖြစ်ပါတယ်");
+                    $('#normal').text("ပုံမှန်ကိုယ်အလေးချိန် ");
                 }else if(bmi >= 25 && bmi < 29.9){
                     $('#normal').text("");
-                    $('#underweight').text("ရှိသင့်သောကိုယ်အလေးချိန်ထက် များနေပါတယ်");
+                    $('#underweight').text("ပုံမှန်ထက် ပိုနေသော ကိုယ်အလေးချိန် ");
                 }else{
                     $('#normal').text("");
-                    $('#underweight').text("ရှိသင့်သည်ထက်ပို၍ဝနေသောသူဖြစ်ပါတယ်");
+                    $('#underweight').text(" အဝလွန်နေသော ကိုယ်အလေးချိန်");
                 }
             })
         })

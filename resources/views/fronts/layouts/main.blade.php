@@ -58,7 +58,7 @@
                         <form action="{{route('customer_logout')}}" method="POST">
                             @csrf
 
-                            <button type="submit" class="btn btn-sm btn-default text-muted mt-1">အကောင့်မှထွက်မည်</button>
+                            <button type="submit" class="btn btn-sm btn-default text-muted mt-1" style="font-size: 18px">အကောင့်မှထွက်မည်</button>
                         </form>
 
                         <a href="{{route('profile_page')}}" class="flex-c-m trans-04 p-lr-25">
@@ -156,9 +156,9 @@
 		<!-- Header Mobile -->
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->
-			<div class="logo-mobile">
-				<a href="index.html"><img src="{{asset('fronts/images/icons/logo-01.png')}}" alt="IMG-LOGO"></a>
-			</div>
+			{{-- <div class="logo-mobile">
+				<a href="index.html"><img src="{{asset('fronts/images/icons/logo.png')}}" alt="IMG-LOGO"></a>
+			</div> --}}
 
 			<!-- Icon header -->
 			<div class="wrap-icon-header flex-w flex-r-m m-r-15">
@@ -220,13 +220,14 @@
 				</li>
 			</ul>
 
+
 			<ul class="main-menu-m">
 				<li class="@yield('home-active')">
-                    <a href="{{route('home')}}">Home</a>
+                    <a href="{{route('home')}}">ပင်မစာမျက်နှာ</a>
                 </li>
 
                 <li class="@yield('shop-active')">
-                    <a href="{{route('shop')}}">Shop</a>
+                    <a href="{{route('shop')}}">ကုန်ပစ္စည်းများ</a>
                 </li>
 
                 <li class="@yield('category-active')">
@@ -234,19 +235,19 @@
                 </li>
 
                 <li class="@yield('blog-active')">
-                    <a href="{{route('blog')}}">Blog</a>
+                    <a href="{{route('blog')}}">အသုံးပြုပုံ</a>
                 </li>
 
                 <li class="@yield('about-active')">
-                    <a href="{{route('about')}}">About</a>
+                    <a href="{{route('about')}}">အကြောင်းအရာ</a>
                 </li>
 
                 <li class="@yield('contact-active')">
-                    <a href="{{route('contact')}}">Contact</a>
+                    <a href="{{route('contact')}}">ဆက်သွယ်ရန်</a>
                 </li>
 
                 <li class="@yield('bmi-active')">
-                    <a href="{{route('bmi')}}">BMI Calculation</a>
+                    <a href="{{route('bmi')}}">BMI</a>
                 </li>
 			</ul>
 		</div>

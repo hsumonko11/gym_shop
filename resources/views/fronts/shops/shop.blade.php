@@ -10,8 +10,8 @@
 
 
                 <a href="{{route('shop')}}">
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1 mt-5" data-filter="*">
-                        All Products
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1 mt-5" data-filter="*" style="font-size: 20px;">
+                        ရရှိနိုင်သော ကုန်ပစ္စည်းများ
                     </button>
                 </a>
 
@@ -38,7 +38,7 @@
                 <form action="{{route('shop')}}" method="GET">
                     @csrf
 
-                    <label for="">Search Category</label>
+                    <label for="">ပစ္စည်းအမျိုးအစားဖြင့်ရှာမည်  </label>
                     <div class="input-group mb-3">
                         <select name="category_id" id="category_id" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" style="width:200px;">
                             <option value="all">All</option>

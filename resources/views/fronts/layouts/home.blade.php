@@ -94,7 +94,7 @@
 				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
 
 					<div class="block1 wrap-pic-w">
-						<img src="{{asset('fronts/photos/boxing.jpg')}}" alt="IMG-BANNER" style="width:370px;height:240px;">
+						<img src="{{asset('fronts/photos/dumbbel.jpg')}}" alt="IMG-BANNER" style="width:370px;height:240px;">
 
 						<a href="{{route('shop_category',$category_one->id)}}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 							<div class="block1-txt-child1 flex-col-l">
@@ -124,7 +124,7 @@
                 <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
 
 					<div class="block1 wrap-pic-w">
-						<img src="{{asset('fronts/photos/shoe.jpg')}}" alt="IMG-BANNER" style="width:370px;height:240px;">
+						<img src="{{asset('fronts/photos/gymbike.jpeg')}}" alt="IMG-BANNER" style="width:370px;height:240px;">
 
 						<a href="{{route('shop_category',$category_two->id)}}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 							<div class="block1-txt-child1 flex-col-l">
@@ -154,7 +154,7 @@
                 <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
 
 					<div class="block1 wrap-pic-w">
-						<img src="{{asset('fronts/photos/sandbag.jpg')}}" alt="IMG-BANNER" style="width:370px;height:240px;">
+						<img src="{{asset('fronts/photos/jumpingrope.jpeg')}}" alt="IMG-BANNER" style="width:370px;height:240px;">
 
 						<a href="{{route('shop_category',$category_three->id)}}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 							<div class="block1-txt-child1 flex-col-l">

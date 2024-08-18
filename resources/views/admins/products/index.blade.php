@@ -15,7 +15,7 @@
                <div class="float-end">
                     <a href="{{route('admin.products.create')}}"><button type="button" class="btn btn-md btn-info mb-2">အသစ်ထည့်မည်</button></a>
 
-                   
+
                </div>
                 <form action="{{route('admin.products.index')}}" method="GET">
                     @csrf
@@ -47,12 +47,13 @@
                     </thead>
 
                     <tbody>
-                        @foreach($products as $product)
-                            <tr class="@if($product->quantity <= 0 && $product->quantity < 10)
-                                        table-danger
-                                        @elseif($product->quantity < 20 && $product->quantity >= 10)
-                                        table-warning
-                                        @endif">
+                       @foreach($products as $product)
+    <tr class="
+        @if($product->quantity <= 10)
+            table-danger
+        @elseif($product->quantity >= 11 && $product->quantity <= 20)
+            table-warning
+        @endif">
                                 <td>{{$product->name}}</td>
                                 <td>{{$product->category != null ? $product->category->name : ''}}</td>
                                 <td>{{$product->price}}</td>

@@ -30,7 +30,7 @@
                         @csrf
 
                         <div class="mt-2">
-                            <label for="supplier_id">Supplier</label>
+                            <label for="supplier_id">ကုမ္ပဏီအမည်</label>
 
                             <select name="supplier_id" id="supplier_id" class="form-control">
                                     <option>Select Supplier...</option>
@@ -45,7 +45,7 @@
                         </div>
 
                         <div class="mt-2">
-                            <label for="product_id">Product</label>
+                            <label for="product_id">ကုန်ပစ္စည်း</label>
 
                             <select name="product_id" id="product_id" class="form-control">
                                     <option>Select Product...</option>
@@ -60,19 +60,19 @@
                         </div>
 
                         <div class="mt-2">
-                            <label for="quantity">Quantity</label>
+                            <label for="quantity">အရေအတွက်</label>
 
                             <input type="number" name="quantity" id="quantity" class="form-control">
                         </div>
 
                         <div class="mt-2">
-                            <label for="price">Price</label>
+                            <label for="price">တင်သွင်းဈေးနှုန်း</label>
 
                             <input type="number" name="price" id="price" step="any" class="form-control">
                         </div>
 
                         <div class="mt-2">
-                            <label for="last_supplied_date">Last Supplied Date</label>
+                            <label for="last_supplied_date">ငွေသွင်းရမည့်နေ့</label>
 
                             <input type="date" name="last_supplied_date" id="last_supplied_date" class="form-control">
                         </div>

@@ -28,12 +28,13 @@
                         <p style="font-size: 18px; color: blue; font-weight: bold;">မိမိရဲ့ BMI ကို တွက်ကြည့်ရအောင် !</p>
 
                         <div class="mt-4">
-                            {{-- <label for="" style="font-size: 18px">Weight (lb)</label> --}}
                             <input type="number" name="weight" style="font-size: 18px" id="weight" class="form-control" min="0" required placeholder="အလေးချိန် ( ပေါင် ) ...">
                         </div>
                         <div class="mt-4">
-                            {{-- <label for="" style="font-size: 18px">Height (inch)</label> --}}
-                            <input type="number" name="height" style="font-size: 18px" id="height" class="form-control" min="0" required placeholder="အရပ် ( လက်မ )...">
+                            <div class="d-flex">
+                                <input type="number" name="feet" style="font-size: 18px" id="feet" class="form-control me-2" min="0" required placeholder="အရပ် ( ပေ )...">
+                                <input type="number" name="inches" style="font-size: 18px" id="inches" class="form-control" min="0" required placeholder="အရပ် ( လက်မ )...">
+                            </div>
                         </div>
 
                         <div class="mt-4">
@@ -54,33 +55,6 @@
 
 </section>
 
-{{-- <div class="container">
-    <div class="d-flex justify-content-center my-5">
-        <div class="col-sm-6">
-            <div class="card card-shadow">
-                <div class="card-body">
-                    <div class="mt-4">
-                        <label for="">Weight (lb)</label>
-                        <input type="number" name="weight" id="weight" class="form-control" placeholder="Enter Weight(lb)...">
-                    </div>
-                    <div class="mt-4">
-                        <label for="">Height (inch)</label>
-                        <input type="number" name="height" id="height" class="form-control" placeholder="Enter Height(inch)...">
-                    </div>
-
-                    <div class="mt-4">
-                        <button type="button" class="btn btn-md btn-success calculate w-100">Calculate</button>
-                    </div>
-                </div>
-
-                <div class="card-footer my-3">
-                    Result : <p id="result"><b></b></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
-
 @endsection
 
 @section('script')
@@ -88,9 +62,11 @@
         $(document).ready(function(){
             $('.calculate').on('click',function(){
                 var weight = $('#weight').val();
-                var height = $('#height').val();
+                var feet = $('#feet').val();
+                var inches = $('#inches').val();
 
-                var bmi = (Number(weight)*703) / (Number(height) * Number(height));
+                var totalHeightInches = (Number(feet) * 12) + Number(inches); // Convert feet to inches and add inches
+                var bmi = (Number(weight) * 703) / (totalHeightInches * totalHeightInches);
 
                 $('#result').text(bmi.toFixed(2));
 
@@ -107,8 +83,7 @@
                     $('#normal').text("");
                     $('#underweight').text(" အဝလွန်နေသော ကိုယ်အလေးချိန်");
                 }
-            })
-        })
-
+            });
+        });
     </script>
 @endsection

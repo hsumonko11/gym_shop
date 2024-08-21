@@ -71,13 +71,13 @@
 
 
                         <div class="mt-2">
-                            <label for="price">တင်သွင်းဈေးနှုန်း</label>
+                            <label for="price">ငွေသွင်းရမည့်နေ့</label>
 
                             <input type="number" name="price" id="price" step="any" class="form-control" value="{{$supplier_product->original_price}}">
                         </div>
 
                         <div class="mt-2">
-                            <label for="last_supplied_date">တင်သွင်းသည့်နေ့</label>
+                            <label for="last_supplied_date">ငွေသွင်းရမည့်နေ့</label>
 
                             <input type="date" name="last_supplied_date" id="last_supplied_date" class="form-control" value="{{$supplier_product->last_supplied_date}}">
                         </div>

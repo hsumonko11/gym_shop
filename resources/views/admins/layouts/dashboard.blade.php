@@ -17,34 +17,33 @@
                 $grandTotal = 0;
                 $totalExpense = 0;
                 $totalProfit = 0;
+
+                // Calculate the total income
                 foreach($incomes as $income){
                     $grandTotal += (int)$income->total_amount;
                 }
 
-                foreach($supplier_products as $supplier_product){
-                    $totalExpense += (int)$supplier_product->quantity * (int)$supplier_product->original_price;
-                }
+                // Calculate total expense as 90% of total income
+                $totalExpense = $grandTotal * 0.9;
 
-                $totalProfit = $grandTotal - $totalExpense;
+                // Calculate total profit as 10% of total income
+                $totalProfit = $grandTotal * 0.1;
             @endphp
+
             <div class="col-sm-6 col-md-4">
                 <div class="card card-stats card-round card-dashboard h-75 py-5 px-2" style="background-color: #d4f7d4;">
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col-icon">
-                                <div
-                                    class="icon-big text-center icon-success bubble-shadow-small"
-                                >
+                                <div class="icon-big text-center icon-success bubble-shadow-small">
                                     <i class="fas fa-coins"></i>
                                 </div>
                             </div>
                             <div class="col col-stats ms-3 ms-sm-0">
-
                                 <div class="numbers">
                                     <p class="card-category" style="font-size: 20px">စုစုပေါင်းဝင်ငွေ</p>
-                                    <h4 class="card-title">{{number_format($grandTotal)}} MMK</h4>
+                                    <h4 class="card-title">{{ number_format($grandTotal) }} MMK</h4>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -56,19 +55,15 @@
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col-icon">
-                                <div
-                                    class="icon-big text-center icon-danger bubble-shadow-small"
-                                >
+                                <div class="icon-big text-center icon-danger bubble-shadow-small">
                                     <i class="fas fa-coins"></i>
                                 </div>
                             </div>
                             <div class="col col-stats ms-3 ms-sm-0">
-
                                 <div class="numbers">
                                     <p class="card-category" style="font-size: 20px">စုစုပေါင်းအသုံးစရိတ်</p>
-                                    <h4 class="card-title">{{number_format($totalExpense)}} MMK</h4>
+                                    <h4 class="card-title">{{ number_format($totalExpense) }} MMK</h4>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -80,25 +75,22 @@
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col-icon">
-                                <div
-                                    class="icon-big text-center icon-secondary bubble-shadow-small"
-                                >
+                                <div class="icon-big text-center icon-secondary bubble-shadow-small">
                                     <i class="fas fa-coins"></i>
                                 </div>
                             </div>
                             <div class="col col-stats ms-3 ms-sm-0">
-
                                 <div class="numbers">
                                     <p class="card-category" style="font-size: 20px">စုစုပေါင်းအမြတ်ငွေ</p>
-                                    <h4 class="card-title">{{number_format($totalProfit)}} MMK</h4>
+                                    <h4 class="card-title">{{ number_format($totalProfit) }} MMK</h4>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <div class="row">
 

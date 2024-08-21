@@ -94,7 +94,7 @@
 
         <div class="row">
 
-            <h2 class="fw-bold mb-3">Menu</h2>
+            {{-- <h2 class="fw-bold mb-3">Menu</h2>
 
             <div class="col-sm-6 col-md-4 mt-2">
                 <a href="{{route('admin.products.index')}}">
@@ -166,7 +166,7 @@
                         </div>
                     </div>
                 </a>
-            </div>
+            </div> --}}
             {{-- <div class="col-sm-6 col-md-4">
                 <a href="{{route('admin.supplier_products.index')}}">
                     <div class="card card-stats card-round card-shadow">
@@ -192,10 +192,10 @@
             </div> --}}
 
         </div>
+{{--
+        <div class="row py-5" style="border-bottom: 1px dashed #333;"> --}}
 
-        <div class="row py-5" style="border-bottom: 1px dashed #333;">
-
-            <div class="col-sm-6 col-md-4 offset-md-2 mt-2">
+            {{-- <div class="col-sm-6 col-md-4 offset-md-2 mt-2">
                 <a href="{{route('admin.orders.index')}}">
                     <div class="card card-stats card-round card-shadow h-100">
                         <div class="card-body">
@@ -241,10 +241,10 @@
                         </div>
                     </div>
                 </a>
-        </div>
+        </div> --}}
 
 
-    </div>
+    {{-- </div> --}}
 
     <div class="row">
         <div class="col-sm-6">

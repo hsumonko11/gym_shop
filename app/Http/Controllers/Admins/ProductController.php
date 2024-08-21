@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admins;
 
-use PDF; 
+use PDF;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Category;
@@ -11,11 +11,14 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
 use Illuminate\Support\Facades\Storage;
 
+
 class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+
+
     public function index(Request $request)
     {
         if($request->search){
@@ -128,17 +131,17 @@ class ProductController extends Controller
         return back()->with('success','ပယ်ဖျက်ခြင်း အောင်မြင်ပါသည်');
     }
 
-    public function pdfview(Request $request)  
-    {  
-        
+    public function pdfview(Request $request)
+    {
+
         $orders = Order::latest('id')->get();
-        view()->share('orders',$orders);  
-  
-        if($request->has('download')){  
-            $pdf = PDF::loadView('admins.orders.pdf');  
-            return $pdf->download('orders .pdf');  
-        }  
-  
+        view()->share('orders',$orders);
+
+        if($request->has('download')){
+            $pdf = PDF::loadView('admins.orders.pdf');
+            return $pdf->download('orders .pdf');
+        }
+
         return redirect()->route('admin.orders.index');
-    }  
+    }
 }

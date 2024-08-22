@@ -80,7 +80,9 @@ Route::middleware('admin_auth')->prefix('admin')->name('admin.')->group(function
 
     Route::resource('/products',ProductController::class);
 
-    Route::get('pdfview',[ProductController::class,'pdfview'])->name('pdfview');  
+    Route::get('pdfview',[ProductController::class,'pdfview'])->name('pdfview');
+    Route::get('admin/products/pdf', [ProductController::class, 'generatePDF'])->name('admin.products.pdf');
+
 
     Route::resource('/suppliers',SupplierController::class);
 

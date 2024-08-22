@@ -52,11 +52,11 @@
                             </select>
                         </div>
 
-                        <div class="mt-2">
+                        {{-- <div class="mt-2">
                             <label for="price">ဈေးနှုန်း</label>
 
                             <input type="number" name="price" id="price" step="any" class="form-control" value="{{$product->price}}">
-                        </div>
+                        </div> --}}
 
                         <div class="mt-2">
                             <label for="description">ဖော်ပြချက်</label>

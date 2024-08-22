@@ -59,7 +59,7 @@ class ProductController extends Controller
         $product->name = $request->name;
         $product->category_id = $request->category_id;
         $product->description = $request->description;
-        $product->price = $request->price;
+        // $product->price = $request->price;
         // $product->quantity = $request->quantity;
         $product->save();
 
@@ -108,7 +108,7 @@ class ProductController extends Controller
         $product->name = $request->name;
         $product->category_id = $request->category_id;
         $product->description = $request->description;
-        $product->price = $request->price;
+        // $product->price = $request->price;
         // $product->quantity = $request->quantity;
         $product->save();
 
@@ -131,17 +131,35 @@ class ProductController extends Controller
         return back()->with('success','ပယ်ဖျက်ခြင်း အောင်မြင်ပါသည်');
     }
 
-    public function pdfview(Request $request)
-    {
+    // public function pdfview(Request $request)
+    // {
 
-        $orders = Order::latest('id')->get();
-        view()->share('orders',$orders);
+    //     $orders = Order::latest('id')->get();
+    //     view()->share('orders',$orders);
 
-        if($request->has('download')){
-            $pdf = PDF::loadView('admins.orders.pdf');
-            return $pdf->download('orders .pdf');
-        }
+    //     if($request->has('download')){
+    //         $pdf = PDF::loadView('admins.orders.pdf');
+    //         return $pdf->download('orders .pdf');
+    //     }
 
-        return redirect()->route('admin.orders.index');
+    //     return redirect()->route('admin.orders.index');
+    // }
+
+    public function pdfView(Request $request)
+{
+    $query = Order::query();
+
+    if ($request->has('from') && $request->has('to')) {
+        $query->whereBetween('created_at', [$request->from, $request->to]);
     }
+
+    $orders = $query->get();
+
+    // Pass $orders to your PDF generation logic here.
+    $pdf = PDF::loadView('admins.orders.pdf', compact('orders'));
+
+    return $pdf->download('orders.pdf');
 }
+
+}
+

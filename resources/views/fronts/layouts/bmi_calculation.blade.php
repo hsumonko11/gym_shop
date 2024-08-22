@@ -15,7 +15,7 @@
                     <div class="card-body" style="padding: 15px;">
                         <p style="font-size: 18px; color: #333;">
                             <strong>BMI (Body Mass Index) ဆိုတာ ကိုယ်ခန္ဓာ ထုထည် ညွှန်းကိန်း ဖြစ်ပါတယ်။</strong><br>
-                            <strong>အရွယ်ရောက်ပြီးလူတစ်ဦးရဲ့ ကိုယ်အလေးချိန်နှင့် အရပ်အမြင့်ပေါ်မူတည်ပြီး ခန္ဓာကိုယ်ထုထည်ပမာဏ ကို တွက်ချက်တာပါ BMI တန်ဖိုး</strong>
+                            <strong>အရွယ်ရောက်ပြီးလူတစ်ဦးရဲ့ ကိုယ်အလေးချိန်နှင့် အရပ်အမြင့်ပေါ်မူတည်ပြီး ခန္ဓာကိုယ်ထုထည်ပမာဏ ကို တွက်ချက်တာပါ <br>BMI = (weight * 707) / height</strong>
                         </p>
                         <ul style="font-size: 18px; color: #333; line-height: 1.6;">
                             <li><strong>၁၈.၅ အောက်</strong> - ပိန်သော ကိုယ်အလေးချိန် (Underweight)</li>
@@ -70,19 +70,20 @@
 
                 $('#result').text(bmi.toFixed(2));
 
-                if(bmi < 18.5){
-                    $('#normal').text("");
-                    $('#underweight').text("ပိန်သော ကိုယ်အလေးချိန်");
-                }else if(bmi >= 18.5 && bmi < 24.9){
-                    $('#underweight').text("");
-                    $('#normal').text("ပုံမှန်ကိုယ်အလေးချိန် ");
-                }else if(bmi >= 25 && bmi < 29.9){
-                    $('#normal').text("");
-                    $('#underweight').text("ပုံမှန်ထက် ပိုနေသော ကိုယ်အလေးချိန် ");
-                }else{
-                    $('#normal').text("");
-                    $('#underweight').text(" အဝလွန်နေသော ကိုယ်အလေးချိန်");
-                }
+                if (bmi < 18.5) {
+    $('#normal').html("");
+    $('#underweight').html('<a href="shop_category/27 "  target="_blank">ပိန်သော ကိုယ်အလေးချိန်</a>');
+} else if (bmi >= 18.5 && bmi < 24.9) {
+    $('#underweight').html("");
+    $('#normal').html('<a href="shop_category/22" target="_blank">ပုံမှန်ကိုယ်အလေးချိန်</a>');
+} else if (bmi >= 25 && bmi < 29.9) {
+    $('#normal').html("");
+    $('#underweight').html('<a href="shop_category/23" target="_blank">ပုံမှန်ထက် ပိုနေသော ကိုယ်အလေးချိန်</a>');
+} else {
+    $('#normal').html("");
+    $('#underweight').html('<a href="shop_category/25" target="_blank">အဝလွန်နေသော ကိုယ်အလေးချိန်</a>');
+}
+
             });
         });
     </script>

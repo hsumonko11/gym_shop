@@ -33,7 +33,7 @@ class OrderController extends Controller
                             ->latest('id')
                             ->paginate(10);
             }
-            
+
         }else{
             $orders = Order::latest('id')->paginate(10);
         }

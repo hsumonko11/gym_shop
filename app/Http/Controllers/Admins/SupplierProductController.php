@@ -16,16 +16,16 @@ class SupplierProductController extends Controller
      */
     public function index(Request $request)
     {
-        if($request->search){
+        if ($request->search) {
             $date = Carbon::parse($request->search);
-            $supplier_products = SupplierProduct::whereDate('last_supplied_date',$date)
+            $supplier_products = SupplierProduct::whereDate('last_supplied_date', $date)
                                     ->latest('id')
                                     ->paginate(10);
-        }else{
+        } else {
             $supplier_products = SupplierProduct::latest('id')->paginate(10);
         }
 
-        return view('admins.supplier_products.index',compact('supplier_products'));
+        return view('admins.supplier_products.index', compact('supplier_products'));
     }
 
     /**
@@ -35,7 +35,7 @@ class SupplierProductController extends Controller
     {
         $suppliers = Supplier::get();
         $products = Product::get();
-        return view('admins.supplier_products.create',compact('suppliers','products'));
+        return view('admins.supplier_products.create', compact('suppliers', 'products'));
     }
 
     /**
@@ -51,13 +51,14 @@ class SupplierProductController extends Controller
         $supplier_product->last_supplied_date = $request->last_supplied_date;
         $supplier_product->save();
 
-        if($request->product_id){
-            $product = Product::where('id',$request->product_id)->first();
+        if ($request->product_id) {
+            $product = Product::where('id', $request->product_id)->first();
             $product->quantity += $request->quantity;
+            $product->price = $supplier_product->original_price * 1.1; // Adding 10% to the original price
             $product->save();
         }
 
-        return redirect()->route('admin.supplier_products.index')->with('success','အသစ်ထည့်ခြင်း အောင်မြင်ပါသည်!');
+        return redirect()->route('admin.supplier_products.index')->with('success', 'အသစ်ထည့်ခြင်း အောင်မြင်ပါသည်!');
     }
 
     /**
@@ -78,7 +79,7 @@ class SupplierProductController extends Controller
 
         $supplier_product = SupplierProduct::find($id);
 
-        return view('admins.supplier_products.edit',compact('suppliers','products','supplier_product'));
+        return view('admins.supplier_products.edit', compact('suppliers', 'products', 'supplier_product'));
     }
 
     /**
@@ -93,8 +94,13 @@ class SupplierProductController extends Controller
         $supplier_product->last_supplied_date = $request->last_supplied_date;
         $supplier_product->save();
 
+        if ($request->product_id) {
+            $product = Product::where('id', $request->product_id)->first();
+            $product->price = $supplier_product->original_price * 1.1; // Adding 10% to the original price
+            $product->save();
+        }
 
-        return redirect()->route('admin.supplier_products.index')->with('success','ပြင်ဆင်ခြင်း အောင်မြင်ပါသည် !');
+        return redirect()->route('admin.supplier_products.index')->with('success', 'ပြင်ဆင်ခြင်း အောင်မြင်ပါသည်!');
     }
 
     /**
@@ -102,8 +108,8 @@ class SupplierProductController extends Controller
      */
     public function destroy(string $id)
     {
-        SupplierProduct::where('id',$id)->delete();
+        SupplierProduct::where('id', $id)->delete();
 
-        return back()->with('success','ပယ်ဖျက်ခြင်း အောင်မြင်ပါသည်!');
+        return back()->with('success', 'ပယ်ဖျက်ခြင်း အောင်မြင်ပါသည်!');
     }
 }

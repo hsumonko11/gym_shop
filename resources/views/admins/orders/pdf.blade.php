@@ -1,14 +1,14 @@
-<style type="text/css">  
+<style type="text/css">
      table{
           width: 100%;
      }
-    table td, table th{  
-        border:1px solid black;  
+    table td, table th{
+        border:1px solid black;
     }
     td,h4{
      text-align: center;
-    }  
-</style>  
+    }
+</style>
 
 <div class="container">
      <h4>Order List</h4>
@@ -20,7 +20,7 @@
                     <th>Customer</th>
                     <th>Total Amount</th>
                     <th>Status</th>
-                   
+
                </tr>
           </thead>
 
@@ -42,7 +42,7 @@
                               <span class="badge badge-danger">Cancelled</span>
                               @endif
                          </td>
-                        
+
 
                     </tr>
                @endforeach

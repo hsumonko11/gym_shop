@@ -71,7 +71,7 @@
 
 
                         <div class="mt-2">
-                            <label for="price">ငွေသွင်းရမည့်နေ့</label>
+                            <label for="price">price</label>
 
                             <input type="number" name="price" id="price" step="any" class="form-control" value="{{$supplier_product->original_price}}">
                         </div>

@@ -32,7 +32,7 @@
                 </form>
             </div>
 
-            <div class="col-sm-3">
+            {{-- <div class="col-sm-3">
                 <form action="{{route('admin.orders.index')}}" method="GET">
                     @csrf
 
@@ -43,11 +43,17 @@
                         </div>
                     </div>
                 </form>
+            </div> --}}
+            <div class="col-sm-1">
+                <a href="{{ route('admin.pdfview', ['download' => 'pdf', 'from' => request()->from, 'to' => request()->to]) }}">
+                    <button type="button" class="btn btn-md btn-info mb-2">PDF</button>
+                </a>
             </div>
 
-            <div class="col-sm-1">
+
+            {{-- <div class="col-sm-1">
             <a href="{{ route('admin.pdfview',['download'=>'pdf']) }}"><button type="button" class="btn btn-md btn-info mb-2">PDF</button></a>
-            </div>
+            </div> --}}
 
         </div>
 

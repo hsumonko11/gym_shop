@@ -88,7 +88,6 @@
           </div>
      </div>
 
-
      <!-- breadcrumb -->
      <div class="container p-t-75">
           <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
@@ -103,13 +102,7 @@
           </div>
      </div>
 
-
-     <!-- Shoping Cart ဈေးခြင်းတောင်း
-ကုန်ပစ္စည်း ဈေးနှုန်း အရေအတွက် ကျသင့်ငွေ လုပ်ဆောင်ချက်။ စုစုပေါင်းကျသင့်ငွေ
-အချက်အလက်များကို ပြည့်စုံစွာ ဖြည့်ပေးပါရှင့်
-ဘောက်ချာနံပါတ် အမည် ဖုန်း နေရပ်လိပ်စာ(အိမ်အမှတ် ၊ လမ်းအမည် ၊မြို့နယ် )
-ငွေပေးချေပြီးနောက် ပြေစာကိုထည့်သွင်းပေးပါ
-အတည်ပြုမည်-->
+     <!-- Shoping Cart Form -->
      <form class="bg0 p-t-25 p-b-85">
           <div class="container">
                <div class="row">
@@ -118,82 +111,77 @@
                               <div class="wrap-table-shopping-cart card-shadow">
                                    <table class="table-shopping-cart">
                                         <thead>
-                                    <tr class="table_head">
-                                        <th class="column-1" style="font-size: 20px;">ကုန်ပစ္စည်း</th>
-                                        <th class="column-2" style="font-size: 20px;"></th>
-                                        <th class="column-3" style="font-size: 20px;">ဈေးနှုန်း</th>
-                                        <th class="column-4" style="font-size: 20px;">အရေအတွက်</th>
-                                        <th class="column-5" style="font-size: 20px;">ကျသင့်ငွေ</th>
-                                        <th class="p-2" style="font-size: 20px;">လုပ်ဆောင်ချက်</th>
-                                    </tr>
-                                </thead>
-
-
+                                            <tr class="table_head">
+                                                <th class="column-1" style="font-size: 20px;">ကုန်ပစ္စည်း</th>
+                                                <th class="column-2" style="font-size: 20px;"></th>
+                                                <th class="column-3" style="font-size: 20px;">ဈေးနှုန်း</th>
+                                                <th class="column-4" style="font-size: 20px;">အရေအတွက်</th>
+                                                <th class="column-5" style="font-size: 20px;">ကျသင့်ငွေ</th>
+                                                <th class="p-2" style="font-size: 20px;">လုပ်ဆောင်ချက်</th>
+                                            </tr>
+                                        </thead>
                                         <tbody>
-                                    @foreach($carts as $cart)
-                                    <tr class="table_row">
-                                        <td class="column-1">
-                                            <img src="{{asset('storage/products/'.$cart->product->image)}}" alt="IMG" style="widht:100px;height:100px;">
-                                        </td>
-                                        <td class="column-2">{{$cart->product->name}}</td>
-                                        <td class="column-3 price">{{$cart->product->price}} MMK</td>
-                                        <td class="column-4 quantity">{{$cart->quantity}}
-                                            <!-- <div class="wrap-num-product flex-w m-l-auto m-r-0">
-                                                <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m quantity-sign">
-                                                    <i class="fs-16 zmdi zmdi-minus"></i>
-                                                </div>
-
-                                                <input class="mtext-104 cl3 txt-center num-product quantity" type="number" name="quantity" value="{{$cart->quantity}}" min="1">
-
-                                                <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m quantity-sign">
-                                                    <i class="fs-16 zmdi zmdi-plus"></i>
-                                                </div>
-
-
-                                            </div> -->
-                                        </td>
-                                        <td class="column-5 total">{{$cart->product->price * $cart->quantity}}</td>
-                                        <td>
-                                            <button type="button" class="btn btn-md btn-outline-danger remove-cart" data-route="{{route('remove_cart',$cart->id)}}"><i class="fa fa-trash"></i></button>
-                                            <input type="hidden" name="cart_id" class="cart-id" value="{{$cart->id}}">
-                                            <input type="hidden" name="quantity" class="cart-quantity" value="{{$cart->quantity}}">
-                                            <input type="hidden" name="product_id" class="product-id" value="{{$cart->product_id}}">
-                                            <input type="hidden" name="user_id" class="user-id" value="{{auth()->user()->id}}">
-                                        </td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-
-
+                                            @foreach($carts as $cart)
+                                            <tr class="table_row">
+                                                <td class="column-1">
+                                                    <img src="{{asset('storage/products/'.$cart->product->image)}}" alt="IMG" style="width:100px;height:100px;">
+                                                </td>
+                                                <td class="column-2">{{$cart->product->name}}</td>
+                                                <td class="column-3 price">{{$cart->product->price}} MMK</td>
+                                                <td class="column-4 quantity">{{$cart->quantity}}</td>
+                                                <td class="column-5 total">{{$cart->product->price * $cart->quantity}}</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-md btn-outline-danger remove-cart" data-route="{{route('remove_cart', $cart->id)}}"><i class="fa fa-trash"></i></button>
+                                                    <input type="hidden" name="cart_id" class="cart-id" value="{{$cart->id}}">
+                                                    <input type="hidden" name="quantity" class="cart-quantity" value="{{$cart->quantity}}">
+                                                    <input type="hidden" name="product_id" class="product-id" value="{{$cart->product_id}}">
+                                                    <input type="hidden" name="user_id" class="user-id" value="{{auth()->user()->id}}">
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
                                    </table>
                               </div>
-
                          </div>
                     </div>
 
                     <div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
                          <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm card-shadow">
                               <h4 class="mtext-109 cl2 p-b-30">
-                                   ဈေးခြင်းတောင်း
+                                <p class="stext-110 cl2" style="font-size: 20px;">
+                                    ဂိတ်ချခ = 1000mmk <br> စုစုပေါင်းကျသင့်ငွေ = <span class="mtext-110 cl2 grand-total">
+
+                                    </span>
+
+                                </p>
                               </h4>
 
                               <div class="flex-w flex-t bor12 p-b-13">
-                                   <div class="size-208">
-                                        <span class="stext-110 cl2" style="font-size: 15px;">
-                                             စုစုပေါင်းကျသင့်ငွေ =
-                                        </span>
-                                   </div>
+                                   {{-- <div class="size-208">
 
-                                   <div class="size-209">
+
+
+                                    <p class="stext-110 cl2" style="font-size: 15px;">
+                                        ဂိတ်ချခ = 1000 <br> စုစုပေါင်းကျသင့်ငွေ = <span class="mtext-110 cl2 grand-total">
+
+                                        </span>
+
+                                    </p>
+                                    <div class="size-209">
                                         <span class="mtext-110 cl2 grand-total">
 
                                         </span>
                                    </div>
+
+                                   </div> --}}
+                                   {{-- <div class="size-209">
+                                        <span class="mtext-110 cl2 grand-total">
+
+                                        </span>
+                                   </div> --}}
                               </div>
 
-
-
-                              <button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer checkout" >
+                              <button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer checkout">
                                    မှာယူမည်
                               </button>
                          </div>
@@ -201,7 +189,6 @@
                </div>
           </div>
      </form>
-
 
      <!-- Back to top -->
      <div class="btn-back-to-top" id="myBtn">
@@ -214,118 +201,94 @@
 
 @section('script')
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             grandTotal();
 
-
-
-            $('.quantity-sign').on("click",function(e){
+            $('.quantity-sign').on("click", function(e) {
                 e.preventDefault();
 
                 var trparent = $(this).parents('tr');
-
-                var price = Number(trparent.find('.price').text().replace("MMK",""));
-
+                var price = Number(trparent.find('.price').text().replace("MMK", ""));
                 var quantity = Number(trparent.find('.quantity').val());
-
                 var total = price * quantity;
 
                 trparent.find('.total').text(total);
-
                 grandTotal();
+            });
 
-                // $('.table-shopping-cart tbody tr').each(function(index,row){
-                //     var price = Number($(row).find('.price').text());
-                //     var quantity = Number($(row).find('.quantity').val());
-
-                //     var total = price * quantity;
-                //     $('.total').text(total);
-                // });
-            })
-
-            $('.remove-cart').on("click",function(e){
+            $('.remove-cart').on("click", function(e) {
                 e.preventDefault();
 
                 var trparent = $(this).parents('tr');
-
                 var cart_id = trparent.find('.cart-id').val();
 
                 $.ajax({
                     url: $(this).data('route'),
                     data: {
-                        id : cart_id,
+                        id: cart_id,
                         _token: $('meta[name="csrf-token"]').attr('content'),
                     },
                     method: "DELETE",
-
-                    success: function(response){
+                    success: function(response) {
                         if (response.message == 'success') {
                             swal("Done!", response.message, "success");
-                            setTimeout(function(){
+                            setTimeout(function() {
                                 window.location.reload();
-                            },2000);
+                            }, 2000);
                         }
                     }
+                });
+            });
 
-                })
-            })
-
-            $('.checkout').on('click',function(e){
+            $('.checkout').on('click', function(e) {
                 e.preventDefault();
 
-                $orderList = [];
+                var orderList = [];
+                var grandTotal = $('.grand-total').text().replace("MMK", "");
+                var userId = $('.user-id').val();
 
-                $grandTotal = $('.grand-total').text().replace("MMK","");
-
-                $userId = $('.user-id').val();
-
-
-
-               $('.table-shopping-cart tbody tr').each(function(index,row){
-                    $productId = $(row).find('.product-id').val();
-                    $quantity = $(row).find('.cart-quantity').val();
-                    $cartId = $(row).find('.cart-id').val();
-                    $total = $(row).find('.total').text();
-                    $orderList.push({
-                        'product_id' : $productId,
-                        'cart_id' : $cartId,
-                        'quantity' : $quantity,
-                        'total' : $total,
+                $('.table-shopping-cart tbody tr').each(function(index, row) {
+                    var productId = $(row).find('.product-id').val();
+                    var quantity = $(row).find('.cart-quantity').val();
+                    var cartId = $(row).find('.cart-id').val();
+                    var total = $(row).find('.total').text();
+                    orderList.push({
+                        'product_id': productId,
+                        'cart_id': cartId,
+                        'quantity': quantity,
+                        'total': total,
                     });
-               })
+                });
 
-               $.ajax({
-                    url : "{{route('order')}}",
-                    method : 'POST',
-                    data : {
-                        'order_list' : $orderList,
-                        'grand_total' : $grandTotal,
-                        'user_id' : $userId,
+                $.ajax({
+                    url: "{{route('order')}}",
+                    method: 'POST',
+                    data: {
+                        'order_list': orderList,
+                        'grand_total': grandTotal,
+                        'user_id': userId,
                         _token: $('meta[name="csrf-token"]').attr('content'),
                     },
-
-                    success: function(res){
+                    success: function(res) {
                         var orderId = res.order_id;
-
                         window.location.href = "{{url('checkout')}}/" + orderId;
                     }
-               })
+                });
+            });
 
-
-            })
-
-            function grandTotal(){
+            function grandTotal() {
                 var grandTotal = 0;
 
-                $('.table-shopping-cart tbody tr').each(function(index,row){
-                    var total = Number($(row).find('.total').text());
-
+                $('.table-shopping-cart tbody tr').each(function(index, row) {
+                    var total = Number($(row).find('.total').text().replace("MMK", ""));
                     grandTotal += total;
-
                 });
+
+                // Add 1000 MMK to the calculated grand total
+                grandTotal += 1000;
 
                 $('.grand-total').text(grandTotal + " MMK");
             }
-        })
+        });
     </script>
 @endsection
